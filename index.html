@@ -1216,7 +1216,7 @@
                 id: 1,
                 category: "Urban Life & Housing",
                 topic: "City vs Rural Life",
-                intro: "You have agreed to take part in a research study about urban life. You will have a short online interview with a researcher. Thank you for participating.",
+                intro: "You have agreed to take part in a research study about urban life. You will have a short online interview with a researcher. The researcher will ask you some questions. Please answer the interviewer's questions.",
                 questions: [
                     { type: "Personal Recall", text: "Now, do you currently live in a big city, a small town, or a village?", transition: "Great." },
                     { type: "Preference/Reaction", text: "Cities affect people in different ways. Some people find cities dynamic and exciting. Others find that cities are overwhelming and drain them of energy. What kind of reaction do you have to cities? Why do you think you react in this way?", transition: "I see." },
@@ -1226,26 +1226,590 @@
             },
             {
                 id: 2,
-                category: "Technology & Digital Life",
-                topic: "Smartphone Usage",
-                intro: "You have agreed to take part in a research study about smartphone usage and its impact on daily life. You will have a short online interview with a researcher. Thank you for participating.",
+                category: "Urban Life & Housing",
+                topic: "Neighborhood & Community",
+                intro: "You have volunteered for a research study about neighborhoods and community life. You will have a short online interview with a researcher. The researcher will ask you some questions. Please answer the interviewer's questions.",
                 questions: [
-                    { type: "Personal Recall", text: "Think back to the last time you used your phone for something important. What did you use it for, and why was it important?", transition: "Great." },
-                    { type: "Preference/Reaction", text: "Everyone feels differently about phones. Some people feel that phones are essential tools that make life easier. Others feel that phones are a constant distraction. How do you feel about your relationship with your phone?", transition: "Interesting." },
-                    { type: "Opinion with Support", text: "Some people believe smartphones clearly make life better by providing instant access to information and communication. Do you agree that smartphones have improved the quality of life? Why or why not?", transition: "Good points. Let me ask you one final question." },
-                    { type: "Policy/Prediction", text: "Do you think schools and workplaces should encourage healthier phone habits, such as limiting screen time or creating phone-free zones? What might be the advantages and disadvantages of such policies?", transition: null }
+                    { type: "Personal Recall", text: "Can you describe the neighborhood where you currently live? What is it like, and how long have you lived there?", transition: "I see." },
+                    { type: "Preference/Reaction", text: "Some people feel a strong sense of community in their neighborhood and enjoy interacting with neighbors regularly. Others prefer to keep to themselves and value privacy over community involvement. How do you usually feel about engaging with your neighbors? Why do you think you feel this way?", transition: "Interesting." },
+                    { type: "Opinion with Support", text: "Some people believe that having a close-knit community makes a neighborhood a better place to live. They argue that neighbors who know each other create safer and more supportive environments. Do you agree that close community ties improve quality of life? Why or why not?", transition: "Interesting perspective. One more question." },
+                    { type: "Policy/Prediction", text: "Some urban planners suggest that cities should design more shared spaces, like community gardens or public squares, to encourage neighbors to interact. How do you think this might affect neighborhood life? Please give one benefit and one drawback.", transition: null }
                 ]
             },
             {
                 id: 3,
+                category: "Urban Life & Housing",
+                topic: "Apartment vs House",
+                intro: "You have agreed to take part in a research study about housing preferences. You will have a short online interview with a researcher. The researcher will ask you some questions. Please answer the interviewer's questions.",
+                questions: [
+                    { type: "Personal Recall", text: "Do you currently live in an apartment or a house? Can you tell me a bit about your living situation?", transition: "Interesting." },
+                    { type: "Preference/Reaction", text: "Some people prefer living in apartments because of the convenience and amenities they offer. Others prefer houses because they provide more space and privacy. Which type of housing do you prefer, and why do you think this suits you better?", transition: "OK." },
+                    { type: "Opinion with Support", text: "Some people believe that owning a house is an important life goal and a sign of success. Others think that renting an apartment is a smarter financial choice, especially in expensive cities. Do you agree that homeownership should be a priority? Why or why not?", transition: "That makes sense. Now, for my last question." },
+                    { type: "Policy/Prediction", text: "Some experts predict that in the future, more people will choose to live in smaller apartments in city centers rather than larger houses in suburbs. How do you think this shift might affect people's lifestyles? Please give one example of a benefit and one example of a drawback.", transition: null }
+                ]
+            },
+            {
+                id: 4,
+                category: "Urban Life & Housing",
+                topic: "Urban Development",
+                intro: "You have volunteered for a research study about urban development. You will have a short online interview with a researcher. The researcher will ask you some questions. Please answer the interviewer's questions.",
+                questions: [
+                    { type: "Personal Recall", text: "Think back to a time when you noticed a significant change in your city or town—maybe a new building, road, or public facility. What was the change, and how did it affect the area?", transition: "Thanks for sharing." },
+                    { type: "Preference/Reaction", text: "Some people welcome urban development because it brings modernization and convenience. Others resist it because they feel it destroys the character of their neighborhood. How do you usually react to development projects in your area? Why do you think you feel this way?", transition: "That's a good point." },
+                    { type: "Opinion with Support", text: "Some people believe that cities should prioritize preserving historical buildings and traditional neighborhoods. Others argue that development and modernization are more important for economic growth. Do you agree that preservation should come before development? Why or why not?", transition: "I appreciate your thoughts. Finally..." },
+                    { type: "Policy/Prediction", text: "Some city planners propose that local residents should have more power to approve or reject development projects in their neighborhoods. How do you think giving residents this power might affect urban development? Please give one benefit and one drawback.", transition: null }
+                ]
+            },
+            {
+                id: 5,
+                category: "Urban Life & Housing",
+                topic: "Living Alone vs With Others",
+                intro: "You have agreed to take part in a research study about living arrangements. You will have a short online interview with a researcher. The researcher will ask you some questions. Please answer the interviewer's questions.",
+                questions: [
+                    { type: "Personal Recall", text: "Do you currently live alone, with family, or with roommates? Can you describe your living arrangement and how you came to this situation?", transition: "Got it." },
+                    { type: "Preference/Reaction", text: "Some people enjoy living alone because it gives them independence and personal space. Others prefer living with family or roommates because they value companionship and shared responsibilities. Which living situation do you prefer, and why do you think this works better for you?", transition: "I understand." },
+                    { type: "Opinion with Support", text: "Some people believe that young adults should live independently as soon as possible to develop life skills and maturity. Others think staying with family longer is beneficial for financial stability and emotional support. Do you agree that young adults should move out early? Why or why not?", transition: "Those are valid points. Here's my final question." },
+                    { type: "Policy/Prediction", text: "Some researchers predict that co-living spaces—where people have private rooms but share common areas—will become more popular in the future. How do you think this trend might affect how people live? Please give one benefit and one drawback.", transition: null }
+                ]
+            },
+            {
+                id: 6,
+                category: "Commuting & Transportation",
+                topic: "Daily Commute",
+                intro: "You have volunteered for a research study about commuting habits. You will have a short online interview with a researcher. The researcher will ask you some questions. Please answer the interviewer's questions.",
+                questions: [
+                    { type: "Personal Recall", text: "Think about your daily commute to school or work. How do you usually get there, and how long does it typically take?", transition: "Great." },
+                    { type: "Preference/Reaction", text: "Imagine that you could choose to commute by car, which is faster but more expensive, or by public transportation, which is slower but less expensive. Which would you choose, and why?", transition: "I see." },
+                    { type: "Opinion with Support", text: "Some people believe that commuting can be stressful and tiring. What do you think are one or two different ways to make commuting more enjoyable? Give reasons for your answer.", transition: "Good points. Let me ask you one final question." },
+                    { type: "Policy/Prediction", text: "How do you think a severe decline in commuting might affect businesses in positive ways and negative ways? Please give one example of each.", transition: null }
+                ]
+            },
+            {
+                id: 7,
+                category: "Commuting & Transportation",
+                topic: "Public Transportation",
+                intro: "You have agreed to take part in a research study about public transportation. You will have a short online interview with a researcher. The researcher will ask you some questions. Please answer the interviewer's questions.",
+                questions: [
+                    { type: "Personal Recall", text: "Can you describe a time when you had an especially good or bad experience with public transportation—maybe on a bus, train, or subway? What happened, and how did it affect your day?", transition: "I see." },
+                    { type: "Preference/Reaction", text: "Some people enjoy using public transportation because it's affordable and environmentally friendly. Others find it inconvenient and prefer driving their own car. How do you usually feel about using public transportation? Why do you think you feel this way?", transition: "Interesting." },
+                    { type: "Opinion with Support", text: "Some people believe that cities should invest more in public transportation like buses and subways, while others think improving roads for private cars is more important. Which approach do you support, and what are your reasons?", transition: "Interesting perspective. One more question." },
+                    { type: "Policy/Prediction", text: "Some city planners suggest making public transportation free for all residents. How do you think this policy might affect cities and their residents? Please give one benefit and one drawback.", transition: null }
+                ]
+            },
+            {
+                id: 8,
+                category: "Commuting & Transportation",
+                topic: "Car Ownership",
+                intro: "You have volunteered for a research study about car ownership. You will have a short online interview with a researcher. The researcher will ask you some questions. Please answer the interviewer's questions.",
+                questions: [
+                    { type: "Personal Recall", text: "Do you own a car or have you ever owned one? Can you tell me about your experience with car ownership or why you've chosen not to own a car?", transition: "Interesting." },
+                    { type: "Preference/Reaction", text: "Some people see owning a car as essential for freedom and convenience. Others view it as an unnecessary expense and prefer alternatives like public transit or ride-sharing. How do you feel about car ownership? Why do you think you feel this way?", transition: "OK." },
+                    { type: "Opinion with Support", text: "Some people believe that owning a car is becoming less important, especially in cities with good public transportation. Do you agree that car ownership will become less common in the future? Why or why not?", transition: "That makes sense. Now, for my last question." },
+                    { type: "Policy/Prediction", text: "Some governments are considering policies to discourage car ownership in city centers, such as higher parking fees or congestion charges. How do you think such policies might affect urban residents? Please give one benefit and one drawback.", transition: null }
+                ]
+            },
+            {
+                id: 9,
+                category: "Commuting & Transportation",
+                topic: "Cycling & Walking",
+                intro: "You have agreed to take part in a research study about cycling and walking. You will have a short online interview with a researcher. The researcher will ask you some questions. Please answer the interviewer's questions.",
+                questions: [
+                    { type: "Personal Recall", text: "Think about your daily travel. Do you often walk or cycle to get around? Can you describe a typical situation when you choose to walk or cycle instead of using other transportation?", transition: "Thanks for sharing." },
+                    { type: "Preference/Reaction", text: "Some people prefer walking or cycling because it's healthy and environmentally friendly. Others find it impractical due to weather, distance, or safety concerns. How do you feel about using walking or cycling as your main way of getting around? Why?", transition: "That's a good point." },
+                    { type: "Opinion with Support", text: "Some people believe that cities should do more to encourage walking and cycling, such as building more pedestrian zones and bike lanes. Do you agree that cities should prioritize these changes? Why or why not?", transition: "I appreciate your thoughts. Finally..." },
+                    { type: "Policy/Prediction", text: "Some cities have introduced bike-sharing programs where people can rent bicycles for short trips. How do you think bike-sharing programs might affect urban transportation? Please give one benefit and one drawback.", transition: null }
+                ]
+            },
+            {
+                id: 10,
+                category: "Commuting & Transportation",
+                topic: "Future of Transportation",
+                intro: "You have volunteered for a research study about transportation. You will have a short online interview with a researcher. The researcher will ask you some questions. Please answer the interviewer's questions.",
+                questions: [
+                    { type: "Personal Recall", text: "Can you describe a time when you had an especially good or bad experience with transportation—maybe on a bus, train, or in traffic? What happened, and how did it affect your day?", transition: "Got it." },
+                    { type: "Preference/Reaction", text: "Some people enjoy commuting because it gives them time to relax or think, while others find it stressful and tiring. How do you usually feel about your daily travel, and why do you think it affects you that way?", transition: "I understand." },
+                    { type: "Opinion with Support", text: "Some people believe that cities should invest more in public transportation like buses and subways, while others think improving roads for private cars is more important. Which approach do you support, and what are your reasons?", transition: "Those are valid points. Here's my final question." },
+                    { type: "Policy/Prediction", text: "Some researchers say that in the near future, self-driving cars will become common. How do you think this change might affect the way people travel? Please give one example of a benefit and one example of a drawback.", transition: null }
+                ]
+            },
+            {
+                id: 11,
+                category: "Technology & Digital Life",
+                topic: "Smartphone Usage",
+                intro: "You have agreed to take part in a research study about smartphone usage. You will have a short online interview with a researcher. The researcher will ask you some questions. Please answer the interviewer's questions.",
+                questions: [
+                    { type: "Personal Recall", text: "Please think back to the last time you used your phone for something important—such as contacting someone, finding your way, making a payment, or translating. Why did you use it then? What did you like about how it worked for you?", transition: "Great." },
+                    { type: "Preference/Reaction", text: "Everyone feels differently about phones. Some people feel inspired by them because they make it so easy to learn new things and get things done. Other people feel annoyed by phones because the notifications are annoying and because they feel forced to check their phones all the time. How do you usually react to your phone in daily life? Why do you think you react that way?", transition: "I see." },
+                    { type: "Opinion with Support", text: "Some people believe smartphones clearly make life better. They would argue that without phones we would be less well connected to our friends and have fewer opportunities to find information to solve our problems. Do you agree that smartphones make life better? Why or why not?", transition: "Good points. Let me ask you one final question." },
+                    { type: "Policy/Prediction", text: "Some people believe that schools and workplaces should encourage healthier phone habits. But others worry that this would go too far and restrict people's freedom. Do you think schools and workplaces should try to encourage people to look at their phones less often? What are some of the benefits and drawbacks of doing this?", transition: null }
+                ]
+            },
+            {
+                id: 12,
+                category: "Technology & Digital Life",
+                topic: "Social Media",
+                intro: "You have volunteered for a research study about social media. You will have a short online interview with a researcher. The researcher will ask you some questions. Please answer the interviewer's questions.",
+                questions: [
+                    { type: "Personal Recall", text: "Can you think of a time when you used social media in a way that was particularly meaningful or memorable to you? What happened, and why did it stand out?", transition: "I see." },
+                    { type: "Preference/Reaction", text: "Some people find social media enjoyable because it helps them stay connected with friends and discover new content. Others find it stressful because of comparison with others or information overload. How do you usually feel when using social media? Why do you think you feel this way?", transition: "Interesting." },
+                    { type: "Opinion with Support", text: "Some people believe that social media has made society more connected and informed. Others argue that it has increased division and spread misinformation. Do you agree that social media has had a mostly positive impact on society? Why or why not?", transition: "Interesting perspective. One more question." },
+                    { type: "Policy/Prediction", text: "Some researchers suggest that governments should regulate social media more strictly to protect users from harmful content and misinformation. How do you think increased government regulation might affect social media? Please give one benefit and one drawback.", transition: null }
+                ]
+            },
+            {
+                id: 13,
+                category: "Technology & Digital Life",
+                topic: "Online Shopping",
+                intro: "You have agreed to take part in a research study about online shopping. You will have a short online interview with a researcher. The researcher will ask you some questions. Please answer the interviewer's questions.",
+                questions: [
+                    { type: "Personal Recall", text: "Think back to a recent time when you shopped online. What did you buy, and what made you choose online shopping instead of going to a physical store?", transition: "Interesting." },
+                    { type: "Preference/Reaction", text: "Some people love online shopping because it's convenient and offers more choices. Others prefer traditional shopping because they can see and touch products before buying. Which do you prefer, and why do you think this approach works better for you?", transition: "OK." },
+                    { type: "Opinion with Support", text: "Some people believe that the growth of online shopping is harmful because it leads to the closure of local stores and job losses. Do you agree that online shopping has a negative impact on local communities? Why or why not?", transition: "That makes sense. Now, for my last question." },
+                    { type: "Policy/Prediction", text: "Some experts predict that in the future, most people will do nearly all their shopping online, and physical stores will become rare. How do you think this shift might affect consumers and communities? Please give one benefit and one drawback.", transition: null }
+                ]
+            },
+            {
+                id: 14,
+                category: "Technology & Digital Life",
+                topic: "AI & Automation",
+                intro: "You have volunteered for a research study about artificial intelligence and automation. You will have a short online interview with a researcher. The researcher will ask you some questions. Please answer the interviewer's questions.",
+                questions: [
+                    { type: "Personal Recall", text: "Can you describe a time when you used an AI tool or automated service—such as a voice assistant, chatbot, or recommendation system? What was the experience like?", transition: "Thanks for sharing." },
+                    { type: "Preference/Reaction", text: "Some people feel excited about AI because it can make life easier and solve complex problems. Others feel worried because they fear it might replace human jobs or be difficult to control. How do you usually feel about AI and automation? Why do you think you feel this way?", transition: "That's a good point." },
+                    { type: "Opinion with Support", text: "Some people believe that AI will create more problems than it solves, particularly in terms of job losses and privacy concerns. Do you agree that the risks of AI outweigh its benefits? Why or why not?", transition: "I appreciate your thoughts. Finally..." },
+                    { type: "Policy/Prediction", text: "Some researchers predict that within the next decade, AI will be making decisions in areas like healthcare, hiring, and law enforcement. How do you think AI-driven decision making might affect society? Please give one benefit and one drawback.", transition: null }
+                ]
+            },
+            {
+                id: 15,
+                category: "Technology & Digital Life",
+                topic: "Digital Detox",
+                intro: "You have agreed to take part in a research study about digital habits. You will have a short online interview with a researcher. The researcher will ask you some questions. Please answer the interviewer's questions.",
+                questions: [
+                    { type: "Personal Recall", text: "Have you ever tried to reduce your screen time or take a break from digital devices? Can you describe that experience and what prompted you to try it?", transition: "Got it." },
+                    { type: "Preference/Reaction", text: "Some people feel refreshed and focused when they spend less time on digital devices. Others feel anxious or disconnected when they can't access their phones and computers. How do you usually feel when you're away from digital devices for an extended period? Why do you think you feel this way?", transition: "I understand." },
+                    { type: "Opinion with Support", text: "Some people believe that regular digital detoxes are essential for mental health and well-being. Others think that in today's connected world, it's impractical and unnecessary to disconnect. Do you agree that people should regularly take breaks from digital devices? Why or why not?", transition: "Those are valid points. Here's my final question." },
+                    { type: "Policy/Prediction", text: "Some companies have started implementing 'digital wellness' programs that encourage employees to limit after-hours email and take breaks from screens. How do you think such programs might affect workplace culture? Please give one benefit and one drawback.", transition: null }
+                ]
+            },
+            {
+                id: 16,
                 category: "Work & Career",
                 topic: "Remote Work",
-                intro: "You have agreed to take part in a research study about remote work and its effects on professional life. You will have a short online interview with a researcher. Thank you for participating.",
+                intro: "You have agreed to take part in a research study about remote work. You will have a short online interview with a researcher. The researcher will ask you some questions. Please answer the interviewer's questions.",
                 questions: [
-                    { type: "Personal Recall", text: "Think back to the last time you worked from a location other than your regular workplace or school. Where were you, and how did you feel about the experience?", transition: "Great." },
-                    { type: "Preference/Reaction", text: "Working remotely affects people in different ways. Some people feel more productive and focused at home. Others feel isolated and struggle to separate work from personal life. How does remote work affect you personally?", transition: "I see." },
-                    { type: "Opinion with Support", text: "Some people believe that those who work remotely have a better work-life balance because they save commuting time and have more flexibility. Do you agree that remote workers generally have a better work-life balance? Why or why not?", transition: "Good points. Let me ask you one final question." },
-                    { type: "Policy/Prediction", text: "Do you think that companies should invest more in virtual social events and team-building activities to maintain company culture in remote settings? What might be the benefits and drawbacks of this approach?", transition: null }
+                    { type: "Personal Recall", text: "Think back to the last time you worked from a location other than your regular workplace or school—like from home, a library, or a coffee shop. What was it like?", transition: "Great." },
+                    { type: "Preference/Reaction", text: "Working remotely affects people in different ways. Some people find that they're more productive and less distracted at home. Others feel isolated and have trouble separating work from personal life. Which reaction do you have to remote work? Why do you think you react this way?", transition: "I see." },
+                    { type: "Opinion with Support", text: "Some people believe that those who work remotely have a better work-life balance than people who commute to an office. Do you agree with this idea? Why or why not?", transition: "Good points. Let me ask you one final question." },
+                    { type: "Policy/Prediction", text: "Do you think that companies should invest more in virtual social events to build connections among remote workers? What are the benefits and drawbacks of doing this?", transition: null }
+                ]
+            },
+            {
+                id: 17,
+                category: "Work & Career",
+                topic: "Work-Life Balance",
+                intro: "You have volunteered for a research study about work-life balance. You will have a short online interview with a researcher. The researcher will ask you some questions. Please answer the interviewer's questions.",
+                questions: [
+                    { type: "Personal Recall", text: "Can you describe a time when you felt your work or study demands were affecting your personal life? What happened, and how did you handle it?", transition: "I see." },
+                    { type: "Preference/Reaction", text: "Some people prefer to keep their work and personal life completely separate, while others don't mind mixing them—for example, checking work emails at home or socializing with colleagues. Which approach do you prefer, and why do you think it suits you?", transition: "Interesting." },
+                    { type: "Opinion with Support", text: "Some people believe that achieving a perfect work-life balance is unrealistic and that people should simply focus on managing their priorities. Do you agree that perfect balance is an unrealistic goal? Why or why not?", transition: "Interesting perspective. One more question." },
+                    { type: "Policy/Prediction", text: "Some countries have experimented with a four-day work week to improve work-life balance. How do you think a shorter work week might affect employees and businesses? Please give one benefit and one drawback.", transition: null }
+                ]
+            },
+            {
+                id: 18,
+                category: "Work & Career",
+                topic: "Career Choice",
+                intro: "You have agreed to take part in a research study about career choices. You will have a short online interview with a researcher. The researcher will ask you some questions. Please answer the interviewer's questions.",
+                questions: [
+                    { type: "Personal Recall", text: "Think about how you chose or are choosing your career path. What factors have been most important in your decision? Can you describe your thought process?", transition: "Interesting." },
+                    { type: "Preference/Reaction", text: "Some people prioritize passion and personal fulfillment when choosing a career. Others prioritize financial stability and job security. Which factors do you consider more important, and why do you think you feel this way?", transition: "OK." },
+                    { type: "Opinion with Support", text: "Some people believe that young people should pursue their dreams regardless of how practical the career might be. Others think it's more important to choose a stable, well-paying job first. Do you agree that following your passion should be the priority? Why or why not?", transition: "That makes sense. Now, for my last question." },
+                    { type: "Policy/Prediction", text: "Some experts predict that people in the future will change careers multiple times throughout their lives, rather than staying in one field. How do you think this trend might affect workers and the job market? Please give one benefit and one drawback.", transition: null }
+                ]
+            },
+            {
+                id: 19,
+                category: "Work & Career",
+                topic: "Workplace Culture",
+                intro: "You have volunteered for a research study about workplace culture. You will have a short online interview with a researcher. The researcher will ask you some questions. Please answer the interviewer's questions.",
+                questions: [
+                    { type: "Personal Recall", text: "Can you describe the workplace or school environment where you've spent the most time? What was the atmosphere like, and how did it affect you?", transition: "Thanks for sharing." },
+                    { type: "Preference/Reaction", text: "Some people thrive in competitive workplace environments where individual achievement is rewarded. Others prefer collaborative cultures where teamwork is emphasized. Which type of environment do you prefer, and why do you think it suits you better?", transition: "That's a good point." },
+                    { type: "Opinion with Support", text: "Some people believe that casual, relaxed workplace cultures lead to higher creativity and job satisfaction. Others think more formal, structured environments are better for productivity and professionalism. Which view do you agree with more, and why?", transition: "I appreciate your thoughts. Finally..." },
+                    { type: "Policy/Prediction", text: "Some companies have started offering unlimited vacation days, trusting employees to manage their own time. How do you think this policy might affect workplace culture and productivity? Please give one benefit and one drawback.", transition: null }
+                ]
+            },
+            {
+                id: 20,
+                category: "Work & Career",
+                topic: "Entrepreneurship",
+                intro: "You have agreed to take part in a research study about entrepreneurship. You will have a short online interview with a researcher. The researcher will ask you some questions. Please answer the interviewer's questions.",
+                questions: [
+                    { type: "Personal Recall", text: "Have you ever thought about starting your own business, or do you know someone who has? Can you describe that experience or idea?", transition: "Got it." },
+                    { type: "Preference/Reaction", text: "Some people are excited by the idea of entrepreneurship because of the freedom and potential rewards. Others prefer traditional employment because of the stability and security it provides. How do you feel about the idea of being your own boss? Why do you think you feel this way?", transition: "I understand." },
+                    { type: "Opinion with Support", text: "Some people believe that entrepreneurship is the best path to success and fulfillment. Others argue that it's too risky and that most people are better off with stable jobs. Do you agree that entrepreneurship is a worthwhile pursuit for most people? Why or why not?", transition: "Those are valid points. Here's my final question." },
+                    { type: "Policy/Prediction", text: "Some governments provide financial support and resources to help young people start businesses. How do you think such programs might affect entrepreneurship and the economy? Please give one benefit and one drawback.", transition: null }
+                ]
+            },
+            {
+                id: 21,
+                category: "Daily Routines & Habits",
+                topic: "Morning Routine",
+                intro: "You have volunteered for a research study about daily routines. You will have a short online interview with a researcher. The researcher will ask you some questions. Please answer the interviewer's questions.",
+                questions: [
+                    { type: "Personal Recall", text: "Can you think of a time when your regular daily routine was disrupted, maybe due to travel, illness, or a special event? What happened, and how did it go?", transition: "Great." },
+                    { type: "Preference/Reaction", text: "Some people feel more productive when they follow a strict daily schedule, while others prefer flexibility and doing things whenever they feel like it. What's your personal preference, and why do you think that approach works better for you?", transition: "I see." },
+                    { type: "Opinion with Support", text: "Many people believe that having a consistent morning routine helps them feel more focused and organized throughout the day. Others say routines don't really matter as long as you get your tasks done. Do you agree or disagree with this idea? Why?", transition: "Good points. Let me ask you one final question." },
+                    { type: "Policy/Prediction", text: "Some researchers believe that in the future, artificial intelligence will design personalized daily routines to help people manage their time better. How do you think this kind of technology might affect people's lives? Please give one example of a benefit and one example of a drawback.", transition: null }
+                ]
+            },
+            {
+                id: 22,
+                category: "Daily Routines & Habits",
+                topic: "Time Management",
+                intro: "You have agreed to take part in a research study about time management. You will have a short online interview with a researcher. The researcher will ask you some questions. Please answer the interviewer's questions.",
+                questions: [
+                    { type: "Personal Recall", text: "Think about a time when you had many tasks to complete in a short period. How did you manage your time, and what strategies did you use?", transition: "I see." },
+                    { type: "Preference/Reaction", text: "Some people like to plan their days in detail, scheduling specific times for each task. Others prefer to work more spontaneously, tackling tasks as they feel motivated. Which approach do you prefer, and why do you think it works for you?", transition: "Interesting." },
+                    { type: "Opinion with Support", text: "Some people believe that the key to good time management is saying no to non-essential tasks and commitments. Do you agree that learning to say no is crucial for managing time effectively? Why or why not?", transition: "Interesting perspective. One more question." },
+                    { type: "Policy/Prediction", text: "Some companies have started implementing 'no meeting days' to help employees have uninterrupted time for focused work. How do you think this policy might affect productivity and workplace culture? Please give one benefit and one drawback.", transition: null }
+                ]
+            },
+            {
+                id: 23,
+                category: "Daily Routines & Habits",
+                topic: "Sleep Habits",
+                intro: "You have volunteered for a research study about sleep habits. You will have a short online interview with a researcher. The researcher will ask you some questions. Please answer the interviewer's questions.",
+                questions: [
+                    { type: "Personal Recall", text: "Can you describe your typical sleep habits? What time do you usually go to bed and wake up, and do you feel you get enough sleep?", transition: "Interesting." },
+                    { type: "Preference/Reaction", text: "Some people are naturally 'morning people' who feel most alert early in the day. Others are 'night owls' who feel more productive late at night. Which type do you consider yourself, and how does this affect your daily life?", transition: "OK." },
+                    { type: "Opinion with Support", text: "Some people believe that society is structured unfairly for morning people, with early school and work start times that disadvantage night owls. Do you agree that schedules should be more flexible to accommodate different sleep patterns? Why or why not?", transition: "That makes sense. Now, for my last question." },
+                    { type: "Policy/Prediction", text: "Some schools have experimented with starting classes later in the morning to match teenagers' natural sleep cycles. How do you think later school start times might affect students? Please give one benefit and one drawback.", transition: null }
+                ]
+            },
+            {
+                id: 24,
+                category: "Daily Routines & Habits",
+                topic: "Eating Habits",
+                intro: "You have agreed to take part in a research study about eating habits. You will have a short online interview with a researcher. The researcher will ask you some questions. Please answer the interviewer's questions.",
+                questions: [
+                    { type: "Personal Recall", text: "Can you describe your typical eating habits on a regular day? When do you eat your meals, and do you usually cook at home or eat out?", transition: "Thanks for sharing." },
+                    { type: "Preference/Reaction", text: "Some people prioritize convenience when it comes to food, choosing quick options like fast food or delivery. Others prefer to cook at home, even if it takes more time. Which approach do you tend to take, and why do you think this suits you?", transition: "That's a good point." },
+                    { type: "Opinion with Support", text: "Some people believe that eating meals together as a family or with friends is important for building relationships and well-being. Others think that in today's busy world, eating alone is perfectly fine. Do you agree that shared meals are important? Why or why not?", transition: "I appreciate your thoughts. Finally..." },
+                    { type: "Policy/Prediction", text: "Some experts suggest that governments should tax unhealthy foods like sugary drinks and fast food to encourage healthier eating. How do you think such taxes might affect people's eating habits and health? Please give one benefit and one drawback.", transition: null }
+                ]
+            },
+            {
+                id: 25,
+                category: "Daily Routines & Habits",
+                topic: "Productivity",
+                intro: "You have volunteered for a research study about productivity. You will have a short online interview with a researcher. The researcher will ask you some questions. Please answer the interviewer's questions.",
+                questions: [
+                    { type: "Personal Recall", text: "Think about a time when you felt particularly productive and accomplished a lot. What conditions or factors contributed to that productive period?", transition: "Got it." },
+                    { type: "Preference/Reaction", text: "Some people feel most productive when working in complete silence, while others prefer background music or ambient noise. What environment helps you focus best, and why do you think it works for you?", transition: "I understand." },
+                    { type: "Opinion with Support", text: "Some people believe that working longer hours leads to getting more done. Others argue that taking regular breaks and working fewer hours is actually more productive. Which view do you agree with more, and why?", transition: "Those are valid points. Here's my final question." },
+                    { type: "Policy/Prediction", text: "Some companies have started using productivity tracking software to monitor how employees spend their time at work. How do you think such monitoring might affect workplace productivity and morale? Please give one benefit and one drawback.", transition: null }
+                ]
+            },
+            {
+                id: 26,
+                category: "Education & Learning",
+                topic: "School Experiences",
+                intro: "You have volunteered for a research study about school experiences. You will have a short online interview with a researcher. The researcher will ask you some questions. Please answer the interviewer's questions.",
+                questions: [
+                    { type: "Personal Recall", text: "Can you think of a school experience that had a big impact on you—maybe a class project, a teacher, or something that happened with classmates? What was the situation, and what made it important?", transition: "Great." },
+                    { type: "Preference/Reaction", text: "Some students enjoy working in groups because they can share ideas, while others prefer working alone to stay focused. What do you usually prefer when doing schoolwork, and why does that style work better for you?", transition: "I see." },
+                    { type: "Opinion with Support", text: "Some people believe that school should focus more on practical skills like communication and teamwork, while others think academic knowledge is more important. What's your opinion on this, and what experiences support your view?", transition: "Good points. Let me ask you one final question." },
+                    { type: "Policy/Prediction", text: "Some educators believe that in the future, students will spend most of their time learning online instead of in classrooms. How might this change affect students? Please give one example of a benefit and one example of a drawback.", transition: null }
+                ]
+            },
+            {
+                id: 27,
+                category: "Education & Learning",
+                topic: "Online Learning",
+                intro: "You have agreed to take part in a research study about online learning. You will have a short online interview with a researcher. The researcher will ask you some questions. Please answer the interviewer's questions.",
+                questions: [
+                    { type: "Personal Recall", text: "Have you taken any online courses or participated in online learning? Can you describe what that experience was like for you?", transition: "I see." },
+                    { type: "Preference/Reaction", text: "Some people find online learning convenient and effective because they can learn at their own pace. Others find it difficult to stay motivated without the structure of a classroom. How do you usually feel about online learning? Why do you think you feel this way?", transition: "Interesting." },
+                    { type: "Opinion with Support", text: "Some people believe that online learning can be just as effective as traditional classroom learning. Others think that face-to-face interaction with teachers and classmates is essential for effective education. Do you agree that online learning can match classroom learning? Why or why not?", transition: "Interesting perspective. One more question." },
+                    { type: "Policy/Prediction", text: "Some universities are considering offering more degrees entirely online to reach students who cannot attend in person. How do you think the expansion of online degrees might affect higher education? Please give one benefit and one drawback.", transition: null }
+                ]
+            },
+            {
+                id: 28,
+                category: "Education & Learning",
+                topic: "Group vs Individual Study",
+                intro: "You have volunteered for a research study about study habits. You will have a short online interview with a researcher. The researcher will ask you some questions. Please answer the interviewer's questions.",
+                questions: [
+                    { type: "Personal Recall", text: "Think about a time when you studied with others in a group. What was that experience like, and how did it compare to studying alone?", transition: "Interesting." },
+                    { type: "Preference/Reaction", text: "Some people learn best when studying with others because it helps them stay motivated and understand different perspectives. Others prefer studying alone because they can concentrate better. Which do you prefer, and why do you think this approach suits you?", transition: "OK." },
+                    { type: "Opinion with Support", text: "Some people believe that group study is more effective because teaching others helps you understand material better. Do you agree that studying with others improves understanding? Why or why not?", transition: "That makes sense. Now, for my last question." },
+                    { type: "Policy/Prediction", text: "Some educators suggest that schools should assign more group projects and reduce individual assessments. How do you think this change might affect student learning and fairness? Please give one benefit and one drawback.", transition: null }
+                ]
+            },
+            {
+                id: 29,
+                category: "Education & Learning",
+                topic: "University Life",
+                intro: "You have agreed to take part in a research study about university life. You will have a short online interview with a researcher. The researcher will ask you some questions. Please answer the interviewer's questions.",
+                questions: [
+                    { type: "Personal Recall", text: "Can you describe your experience with university or college? If you haven't attended, what are your expectations or thoughts about university life?", transition: "Thanks for sharing." },
+                    { type: "Preference/Reaction", text: "Some students prefer to live on campus to be fully immersed in university life. Others prefer to live at home or off-campus to save money and maintain independence. Which would you prefer, and why do you think this suits you better?", transition: "That's a good point." },
+                    { type: "Opinion with Support", text: "Some people believe that a university degree is essential for success in today's job market. Others argue that skills and experience matter more than formal education. Do you agree that a degree is necessary for success? Why or why not?", transition: "I appreciate your thoughts. Finally..." },
+                    { type: "Policy/Prediction", text: "Some experts predict that the cost of university education will continue to rise, making it unaffordable for many. How do you think this trend might affect access to higher education? Please give one benefit and one drawback of alternative approaches like free online courses.", transition: null }
+                ]
+            },
+            {
+                id: 30,
+                category: "Education & Learning",
+                topic: "Lifelong Learning",
+                intro: "You have volunteered for a research study about lifelong learning. You will have a short online interview with a researcher. The researcher will ask you some questions. Please answer the interviewer's questions.",
+                questions: [
+                    { type: "Personal Recall", text: "Have you ever learned a new skill or subject as an adult, outside of formal education? Can you describe that experience and what motivated you to learn?", transition: "Got it." },
+                    { type: "Preference/Reaction", text: "Some people enjoy continuously learning new things throughout their lives and seek out courses and new skills. Others prefer to focus on what they already know and are good at. How do you feel about learning new things as you get older? Why?", transition: "I understand." },
+                    { type: "Opinion with Support", text: "Some people believe that in today's fast-changing world, lifelong learning is essential to stay relevant in the job market. Do you agree that continuous learning has become a necessity rather than a choice? Why or why not?", transition: "Those are valid points. Here's my final question." },
+                    { type: "Policy/Prediction", text: "Some companies are starting to offer employees time and funding for continuing education and professional development. How do you think such programs might affect employees and businesses? Please give one benefit and one drawback.", transition: null }
+                ]
+            },
+            {
+                id: 31,
+                category: "Entertainment & Hobbies",
+                topic: "Movies & TV Shows",
+                intro: "You have volunteered for a research study about entertainment. You will have a short online interview with a researcher. The researcher will ask you some questions. Please answer the interviewer's questions.",
+                questions: [
+                    { type: "Personal Recall", text: "Can you describe a time when you watched a movie, show, or performance that really stood out to you? What was it, and what made it so memorable?", transition: "Great." },
+                    { type: "Preference/Reaction", text: "Some people prefer quiet, relaxing entertainment like reading or listening to music, while others enjoy exciting activities like going to concerts or watching action films. What kind of entertainment do you usually enjoy, and why?", transition: "I see." },
+                    { type: "Opinion with Support", text: "Some people say that too much entertainment, especially on screens, can reduce creativity or harm social life. Others say it helps people relax and connect with others. Do you agree or disagree with this idea? Why?", transition: "Good points. Let me ask you one final question." },
+                    { type: "Policy/Prediction", text: "Some experts predict that in the future, most entertainment will be interactive, using virtual reality or AI. How might this affect how people spend their free time? Please give one benefit and one drawback.", transition: null }
+                ]
+            },
+            {
+                id: 32,
+                category: "Entertainment & Hobbies",
+                topic: "Music & Concerts",
+                intro: "You have agreed to take part in a research study about music. You will have a short online interview with a researcher. The researcher will ask you some questions. Please answer the interviewer's questions.",
+                questions: [
+                    { type: "Personal Recall", text: "Think about a time when music had a strong effect on you—maybe at a concert, during a special occasion, or while listening alone. What happened, and why was it meaningful?", transition: "I see." },
+                    { type: "Preference/Reaction", text: "Some people prefer listening to music alone as a personal experience. Others enjoy music most when sharing it with others, like at concerts or parties. Which do you prefer, and why do you think this suits you?", transition: "Interesting." },
+                    { type: "Opinion with Support", text: "Some people believe that live concerts and performances offer an experience that recorded music can never match. Do you agree that live music is significantly better than recorded music? Why or why not?", transition: "Interesting perspective. One more question." },
+                    { type: "Policy/Prediction", text: "Some researchers predict that AI will soon be able to create music that is indistinguishable from human-made music. How do you think AI-generated music might affect the music industry and listeners? Please give one benefit and one drawback.", transition: null }
+                ]
+            },
+            {
+                id: 33,
+                category: "Entertainment & Hobbies",
+                topic: "Reading",
+                intro: "You have volunteered for a research study about reading habits. You will have a short online interview with a researcher. The researcher will ask you some questions. Please answer the interviewer's questions.",
+                questions: [
+                    { type: "Personal Recall", text: "Can you think of a book or article that had a significant impact on you? What was it about, and why did it affect you?", transition: "Interesting." },
+                    { type: "Preference/Reaction", text: "Some people prefer reading physical books because they enjoy the tactile experience. Others prefer e-books or audiobooks for their convenience. Which format do you prefer, and why do you think it works better for you?", transition: "OK." },
+                    { type: "Opinion with Support", text: "Some people believe that reading books is becoming less important in the age of videos and podcasts. Do you agree that other media can replace the benefits of reading? Why or why not?", transition: "That makes sense. Now, for my last question." },
+                    { type: "Policy/Prediction", text: "Some educators suggest that schools should allow students to choose any books they want to read rather than assigning specific texts. How do you think this approach might affect students' reading habits and learning? Please give one benefit and one drawback.", transition: null }
+                ]
+            },
+            {
+                id: 34,
+                category: "Entertainment & Hobbies",
+                topic: "Sports & Games",
+                intro: "You have agreed to take part in a research study about sports and games. You will have a short online interview with a researcher. The researcher will ask you some questions. Please answer the interviewer's questions.",
+                questions: [
+                    { type: "Personal Recall", text: "Do you play any sports or games regularly? Can you describe your experience with a sport or game that you've enjoyed?", transition: "Thanks for sharing." },
+                    { type: "Preference/Reaction", text: "Some people prefer individual sports or activities where they can focus on personal improvement. Others prefer team sports where they can work with others toward a common goal. Which do you prefer, and why do you think this suits you?", transition: "That's a good point." },
+                    { type: "Opinion with Support", text: "Some people believe that competitive sports teach valuable life lessons about discipline, teamwork, and handling failure. Others think the emphasis on winning can be harmful. Do you agree that competitive sports are beneficial? Why or why not?", transition: "I appreciate your thoughts. Finally..." },
+                    { type: "Policy/Prediction", text: "Some people argue that schools should require all students to participate in physical education and sports. How do you think mandatory physical education might affect students? Please give one benefit and one drawback.", transition: null }
+                ]
+            },
+            {
+                id: 35,
+                category: "Entertainment & Hobbies",
+                topic: "Creative Hobbies",
+                intro: "You have volunteered for a research study about hobbies. You will have a short online interview with a researcher. The researcher will ask you some questions. Please answer the interviewer's questions.",
+                questions: [
+                    { type: "Personal Recall", text: "Do you have any creative hobbies like drawing, writing, music, or crafts? Can you describe what you do and what draws you to this activity?", transition: "Got it." },
+                    { type: "Preference/Reaction", text: "Some people enjoy creative activities as a way to relax and express themselves. Others find creative work stressful and prefer more passive leisure like watching TV. How do you feel about creative hobbies? Why do you think you feel this way?", transition: "I understand." },
+                    { type: "Opinion with Support", text: "Some people believe that everyone has creative potential and that creative hobbies are important for mental well-being. Others think creativity is a special talent that not everyone possesses. Do you agree that everyone can benefit from creative hobbies? Why or why not?", transition: "Those are valid points. Here's my final question." },
+                    { type: "Policy/Prediction", text: "Some schools have reduced time for arts and creative subjects to focus more on academic testing. How do you think this trend might affect students' development? Please give one benefit and one drawback.", transition: null }
+                ]
+            },
+            {
+                id: 36,
+                category: "Decision Making & Problem Solving",
+                topic: "Daily Decisions",
+                intro: "You have volunteered for a research study about decision making. You will have a short online interview with a researcher. The researcher will ask you some questions. Please answer the interviewer's questions.",
+                questions: [
+                    { type: "Personal Recall", text: "Can you talk about a time when you had to make a difficult decision in your daily life—like choosing between two options or solving a problem? What was the situation, and how did you decide?", transition: "Great." },
+                    { type: "Preference/Reaction", text: "Some people like to make decisions quickly and trust their instincts, while others take more time and prefer to think carefully. What is your usual decision-making style, and why do you think that approach suits you?", transition: "I see." },
+                    { type: "Opinion with Support", text: "Many people believe that important decisions should always involve advice from others—like family, friends, or teachers. Others say people should rely on their own judgment. Do you agree or disagree with this view? Why?", transition: "Good points. Let me ask you one final question." },
+                    { type: "Policy/Prediction", text: "Some researchers predict that in the future, decision-making apps will guide people on what to do in areas like health, careers, or relationships. How might this affect individuals and society? Please give one benefit and one drawback.", transition: null }
+                ]
+            },
+            {
+                id: 37,
+                category: "Decision Making & Problem Solving",
+                topic: "Big Life Choices",
+                intro: "You have agreed to take part in a research study about life decisions. You will have a short online interview with a researcher. The researcher will ask you some questions. Please answer the interviewer's questions.",
+                questions: [
+                    { type: "Personal Recall", text: "Think about a major life decision you've made or are facing—such as choosing a school, career, or place to live. What factors did you consider or are you considering?", transition: "I see." },
+                    { type: "Preference/Reaction", text: "Some people prefer to plan their lives carefully and set long-term goals. Others prefer to take life as it comes and make decisions as opportunities arise. Which approach do you tend to take, and why do you think it works for you?", transition: "Interesting." },
+                    { type: "Opinion with Support", text: "Some people believe that taking risks is essential for success and a fulfilling life. Others think that being cautious and making safe choices leads to better outcomes. Do you agree that taking risks is important? Why or why not?", transition: "Interesting perspective. One more question." },
+                    { type: "Policy/Prediction", text: "Some career counselors suggest that young people should take personality and aptitude tests to help them choose suitable careers. How do you think such tests might affect career decisions? Please give one benefit and one drawback.", transition: null }
+                ]
+            },
+            {
+                id: 38,
+                category: "Decision Making & Problem Solving",
+                topic: "Seeking Advice",
+                intro: "You have volunteered for a research study about how people seek advice. You will have a short online interview with a researcher. The researcher will ask you some questions. Please answer the interviewer's questions.",
+                questions: [
+                    { type: "Personal Recall", text: "Can you describe a time when you asked someone for advice about a problem or decision? Who did you ask, and how helpful was their advice?", transition: "Interesting." },
+                    { type: "Preference/Reaction", text: "Some people prefer to seek advice from family and close friends who know them well. Others prefer advice from experts or professionals who have specialized knowledge. Who do you usually turn to for advice, and why?", transition: "OK." },
+                    { type: "Opinion with Support", text: "Some people believe that advice from older generations is often outdated and less relevant to today's world. Do you agree that younger people should be cautious about taking advice from older generations? Why or why not?", transition: "That makes sense. Now, for my last question." },
+                    { type: "Policy/Prediction", text: "Some people are now turning to online communities and social media for advice instead of asking people they know personally. How do you think this trend might affect the quality of advice people receive? Please give one benefit and one drawback.", transition: null }
+                ]
+            },
+            {
+                id: 39,
+                category: "Decision Making & Problem Solving",
+                topic: "Learning from Mistakes",
+                intro: "You have agreed to take part in a research study about problem solving. You will have a short online interview with a researcher. The researcher will ask you some questions. Please answer the interviewer's questions.",
+                questions: [
+                    { type: "Personal Recall", text: "Can you think of a mistake you made that turned out to be a valuable learning experience? What happened, and what did you learn from it?", transition: "Thanks for sharing." },
+                    { type: "Preference/Reaction", text: "Some people view mistakes as failures to be avoided at all costs. Others see them as natural parts of learning and growth. How do you usually react when you make a mistake? Why do you think you respond this way?", transition: "That's a good point." },
+                    { type: "Opinion with Support", text: "Some people believe that schools and workplaces should create environments where making mistakes is acceptable and even encouraged. Do you agree that this approach leads to better learning and innovation? Why or why not?", transition: "I appreciate your thoughts. Finally..." },
+                    { type: "Policy/Prediction", text: "Some educators suggest that students should be graded on effort and improvement rather than just final results. How do you think this approach might affect student motivation and learning? Please give one benefit and one drawback.", transition: null }
+                ]
+            },
+            {
+                id: 40,
+                category: "Decision Making & Problem Solving",
+                topic: "Planning vs Spontaneity",
+                intro: "You have volunteered for a research study about how people approach life. You will have a short online interview with a researcher. The researcher will ask you some questions. Please answer the interviewer's questions.",
+                questions: [
+                    { type: "Personal Recall", text: "Think about a time when you did something spontaneously without much planning. What was the experience like, and how did it turn out?", transition: "Got it." },
+                    { type: "Preference/Reaction", text: "Some people feel more comfortable when they plan everything in advance. Others prefer to be spontaneous and make decisions in the moment. Which approach do you prefer, and why do you think it suits your personality?", transition: "I understand." },
+                    { type: "Opinion with Support", text: "Some people believe that too much planning can limit opportunities and make life less exciting. Others think that planning is essential for success and reducing stress. Do you agree that planning can sometimes be limiting? Why or why not?", transition: "Those are valid points. Here's my final question." },
+                    { type: "Policy/Prediction", text: "Some time management experts suggest that people should schedule every hour of their day for maximum productivity. How do you think such strict scheduling might affect people's lives? Please give one benefit and one drawback.", transition: null }
+                ]
+            },
+            {
+                id: 41,
+                category: "Travel & Culture",
+                topic: "Travel Experiences",
+                intro: "You have agreed to take part in a research study about travel. You will have a short online interview with a researcher. The researcher will ask you some questions. Please answer the interviewer's questions.",
+                questions: [
+                    { type: "Personal Recall", text: "Can you describe a memorable travel experience you've had? What made it stand out, and how did it affect you?", transition: "Great." },
+                    { type: "Preference/Reaction", text: "Some people prefer to plan every detail of their trips in advance. Others prefer to travel spontaneously and discover things along the way. Which approach do you prefer, and why do you think it works better for you?", transition: "I see." },
+                    { type: "Opinion with Support", text: "Some people believe that travel is the best way to learn about other cultures and broaden one's perspective. Others think you can learn just as much through books, movies, and the internet. Do you agree that travel is essential for cultural understanding? Why or why not?", transition: "Good points. Let me ask you one final question." },
+                    { type: "Policy/Prediction", text: "Some popular tourist destinations are considering limiting the number of visitors to protect the environment and local culture. How do you think such restrictions might affect tourism and local communities? Please give one benefit and one drawback.", transition: null }
+                ]
+            },
+            {
+                id: 42,
+                category: "Travel & Culture",
+                topic: "Cultural Differences",
+                intro: "You have volunteered for a research study about cultural experiences. You will have a short online interview with a researcher. The researcher will ask you some questions. Please answer the interviewer's questions.",
+                questions: [
+                    { type: "Personal Recall", text: "Have you ever experienced a significant cultural difference—either while traveling or meeting people from other cultures? Can you describe what happened and how you reacted?", transition: "I see." },
+                    { type: "Preference/Reaction", text: "Some people find cultural differences exciting and enriching. Others find them confusing or uncomfortable. How do you usually feel when encountering unfamiliar cultural practices? Why do you think you react this way?", transition: "Interesting." },
+                    { type: "Opinion with Support", text: "Some people believe that with globalization, cultural differences are becoming less important and that the world is becoming more uniform. Do you agree that cultural distinctions are fading? Why or why not?", transition: "Interesting perspective. One more question." },
+                    { type: "Policy/Prediction", text: "Some schools have started requiring students to learn about other cultures and even study abroad as part of their education. How do you think mandatory cultural education might affect students? Please give one benefit and one drawback.", transition: null }
+                ]
+            },
+            {
+                id: 43,
+                category: "Travel & Culture",
+                topic: "Living Abroad",
+                intro: "You have agreed to take part in a research study about international living. You will have a short online interview with a researcher. The researcher will ask you some questions. Please answer the interviewer's questions.",
+                questions: [
+                    { type: "Personal Recall", text: "Have you ever lived abroad or considered living in another country? Can you describe that experience or what attracts or concerns you about the idea?", transition: "Interesting." },
+                    { type: "Preference/Reaction", text: "Some people dream of living in a foreign country for new experiences and opportunities. Others prefer to stay in their home country where they feel comfortable and connected. How do you feel about the idea of living abroad? Why?", transition: "OK." },
+                    { type: "Opinion with Support", text: "Some people believe that living abroad is essential for personal growth and developing a global perspective. Do you agree that everyone should try living in another country at some point? Why or why not?", transition: "That makes sense. Now, for my last question." },
+                    { type: "Policy/Prediction", text: "Some companies are now allowing employees to work remotely from any country they choose. How do you think this trend might affect workers and workplaces? Please give one benefit and one drawback.", transition: null }
+                ]
+            },
+            {
+                id: 44,
+                category: "Travel & Culture",
+                topic: "Local Tourism",
+                intro: "You have volunteered for a research study about tourism. You will have a short online interview with a researcher. The researcher will ask you some questions. Please answer the interviewer's questions.",
+                questions: [
+                    { type: "Personal Recall", text: "Have you ever explored tourist attractions or interesting places in your own city or country? Can you describe an experience of being a tourist in your own region?", transition: "Thanks for sharing." },
+                    { type: "Preference/Reaction", text: "Some people prefer traveling to foreign countries for new and exotic experiences. Others enjoy exploring hidden gems in their own country first. Which do you prefer, and why do you think this appeals to you?", transition: "That's a good point." },
+                    { type: "Opinion with Support", text: "Some people believe that we often overlook the beauty and interest of our own countries while dreaming of traveling abroad. Do you agree that people should explore their own country more before traveling overseas? Why or why not?", transition: "I appreciate your thoughts. Finally..." },
+                    { type: "Policy/Prediction", text: "Some governments have started promoting domestic tourism to boost local economies. How do you think campaigns encouraging local tourism might affect communities and travelers? Please give one benefit and one drawback.", transition: null }
+                ]
+            },
+            {
+                id: 45,
+                category: "Travel & Culture",
+                topic: "Language & Communication",
+                intro: "You have agreed to take part in a research study about language and communication. You will have a short online interview with a researcher. The researcher will ask you some questions. Please answer the interviewer's questions.",
+                questions: [
+                    { type: "Personal Recall", text: "Have you ever tried to communicate with someone who speaks a different language? Can you describe that experience and how you managed to communicate?", transition: "Got it." },
+                    { type: "Preference/Reaction", text: "Some people enjoy the challenge of learning new languages and communicating across language barriers. Others find it frustrating and prefer to stick to their native language. How do you feel about communicating in foreign languages? Why?", transition: "I understand." },
+                    { type: "Opinion with Support", text: "Some people believe that English is becoming the global language and that everyone should learn it. Others think this threatens linguistic diversity and cultural identity. Do you agree that a single global language is beneficial? Why or why not?", transition: "Those are valid points. Here's my final question." },
+                    { type: "Policy/Prediction", text: "Some experts predict that AI translation technology will soon eliminate the need to learn foreign languages. How do you think advanced translation technology might affect language learning and cross-cultural communication? Please give one benefit and one drawback.", transition: null }
+                ]
+            },
+            {
+                id: 46,
+                category: "Health & Wellness",
+                topic: "Exercise & Fitness",
+                intro: "You have volunteered for a research study about health and fitness. You will have a short online interview with a researcher. The researcher will ask you some questions. Please answer the interviewer's questions.",
+                questions: [
+                    { type: "Personal Recall", text: "Do you exercise regularly? Can you describe your exercise routine or, if you don't exercise much, what typically prevents you from being more active?", transition: "Great." },
+                    { type: "Preference/Reaction", text: "Some people prefer exercising at a gym with equipment and classes. Others prefer outdoor activities or exercising at home. Which do you prefer, and why do you think this works better for you?", transition: "I see." },
+                    { type: "Opinion with Support", text: "Some people believe that regular exercise should be a priority for everyone, regardless of how busy they are. Others think it's acceptable to skip exercise when work or other responsibilities demand attention. Do you agree that exercise should always be a priority? Why or why not?", transition: "Good points. Let me ask you one final question." },
+                    { type: "Policy/Prediction", text: "Some companies have started offering gym memberships or fitness programs to employees to promote health. How do you think employer-sponsored fitness programs might affect employees and workplace culture? Please give one benefit and one drawback.", transition: null }
+                ]
+            },
+            {
+                id: 47,
+                category: "Health & Wellness",
+                topic: "Mental Health",
+                intro: "You have agreed to take part in a research study about mental health. You will have a short online interview with a researcher. The researcher will ask you some questions. Please answer the interviewer's questions.",
+                questions: [
+                    { type: "Personal Recall", text: "Can you think of a time when you felt particularly stressed or overwhelmed? What caused it, and how did you cope with the situation?", transition: "I see." },
+                    { type: "Preference/Reaction", text: "Some people prefer to deal with stress and emotional problems on their own. Others prefer to talk to friends, family, or professionals. How do you usually handle difficult emotions? Why do you think this approach works for you?", transition: "Interesting." },
+                    { type: "Opinion with Support", text: "Some people believe that mental health is just as important as physical health and should receive equal attention. Others think mental health concerns are often exaggerated in today's society. Do you agree that mental health deserves more attention? Why or why not?", transition: "Interesting perspective. One more question." },
+                    { type: "Policy/Prediction", text: "Some schools have started including mental health education in their curriculum to help students manage stress and emotions. How do you think mental health education might affect students? Please give one benefit and one drawback.", transition: null }
+                ]
+            },
+            {
+                id: 48,
+                category: "Health & Wellness",
+                topic: "Stress Management",
+                intro: "You have volunteered for a research study about stress management. You will have a short online interview with a researcher. The researcher will ask you some questions. Please answer the interviewer's questions.",
+                questions: [
+                    { type: "Personal Recall", text: "What activities or methods do you use to relax and manage stress? Can you describe a time when these methods helped you feel better?", transition: "Interesting." },
+                    { type: "Preference/Reaction", text: "Some people manage stress through physical activities like exercise or sports. Others prefer quiet activities like meditation, reading, or listening to music. Which approach do you prefer, and why do you think it works for you?", transition: "OK." },
+                    { type: "Opinion with Support", text: "Some people believe that modern life is more stressful than ever before due to technology and constant connectivity. Others think that previous generations faced different but equally difficult challenges. Do you agree that life today is more stressful? Why or why not?", transition: "That makes sense. Now, for my last question." },
+                    { type: "Policy/Prediction", text: "Some workplaces have introduced meditation rooms and relaxation breaks to help employees manage stress. How do you think such workplace wellness initiatives might affect employee well-being and productivity? Please give one benefit and one drawback.", transition: null }
+                ]
+            },
+            {
+                id: 49,
+                category: "Health & Wellness",
+                topic: "Diet & Nutrition",
+                intro: "You have agreed to take part in a research study about diet and nutrition. You will have a short online interview with a researcher. The researcher will ask you some questions. Please answer the interviewer's questions.",
+                questions: [
+                    { type: "Personal Recall", text: "Have you ever made a significant change to your diet, such as eating healthier, trying a new diet, or cutting out certain foods? Can you describe that experience?", transition: "Thanks for sharing." },
+                    { type: "Preference/Reaction", text: "Some people carefully monitor what they eat and follow specific diets. Others prefer to eat intuitively without strict rules. Which approach do you take, and why do you think it suits you?", transition: "That's a good point." },
+                    { type: "Opinion with Support", text: "Some people believe that schools should educate children about nutrition and healthy eating from a young age. Others think this is the responsibility of parents, not schools. Do you agree that nutrition education should be part of school curriculum? Why or why not?", transition: "I appreciate your thoughts. Finally..." },
+                    { type: "Policy/Prediction", text: "Some researchers predict that in the future, personalized nutrition plans based on genetic testing will become common. How do you think personalized nutrition might affect how people eat? Please give one benefit and one drawback.", transition: null }
+                ]
+            },
+            {
+                id: 50,
+                category: "Health & Wellness",
+                topic: "Work-Life Wellness",
+                intro: "You have volunteered for a research study about wellness. You will have a short online interview with a researcher. The researcher will ask you some questions. Please answer the interviewer's questions.",
+                questions: [
+                    { type: "Personal Recall", text: "Can you describe how your work or study schedule affects your overall health and well-being? Are there any habits you've developed to stay healthy despite a busy schedule?", transition: "Got it." },
+                    { type: "Preference/Reaction", text: "Some people believe they work best under pressure and thrive in high-stress environments. Others feel that constant pressure harms their health and prefer a more relaxed pace. How do you react to pressure in work or study? Why do you think you respond this way?", transition: "I understand." },
+                    { type: "Opinion with Support", text: "Some people believe that success in career often comes at the cost of health and personal relationships. Do you agree that there is usually a trade-off between professional success and personal well-being? Why or why not?", transition: "Those are valid points. Here's my final question." },
+                    { type: "Policy/Prediction", text: "Some governments have introduced laws limiting working hours to protect employee health and well-being. How do you think such regulations might affect workers and businesses? Please give one benefit and one drawback.", transition: null }
                 ]
             }
         ];
