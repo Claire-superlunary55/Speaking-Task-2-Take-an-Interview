@@ -1,0 +1,1987 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOEFL 2026 Speaking - Take an Interview</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        :root {
+            --primary: #4f46e5;
+            --primary-light: #6366f1;
+            --primary-dark: #4338ca;
+            --danger: #ef4444;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-400: #9ca3af;
+            --gray-500: #6b7280;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #f8fafc;
+            color: var(--gray-800);
+            min-height: 100vh;
+            line-height: 1.5;
+        }
+
+        .container { 
+            max-width: 480px; 
+            margin: 0 auto; 
+            padding: 20px 16px;
+            min-height: 100vh;
+        }
+
+        .screen { display: none; }
+        .screen.active { display: flex; flex-direction: column; }
+
+        /* ==================== START SCREEN ==================== */
+        #startScreen {
+            justify-content: center;
+            min-height: calc(100vh - 40px);
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        .logo-icon {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+            font-size: 28px;
+            box-shadow: 0 8px 24px rgba(79, 70, 229, 0.25);
+        }
+        .logo h1 {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 4px;
+        }
+        .logo p {
+            font-size: 14px;
+            color: var(--gray-500);
+        }
+
+        /* Main Card */
+        .main-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 24px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        /* Mode Selection */
+        .mode-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .mode-btn {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 16px;
+            background: var(--gray-50);
+            border: 2px solid transparent;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .mode-btn:hover {
+            background: var(--gray-100);
+        }
+        .mode-btn.selected {
+            background: #eef2ff;
+            border-color: var(--primary);
+        }
+        .mode-btn input {
+            display: none;
+        }
+        .mode-btn .check {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--gray-300);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            flex-shrink: 0;
+        }
+        .mode-btn.selected .check {
+            border-color: var(--primary);
+            background: var(--primary);
+        }
+        .mode-btn.selected .check::after {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: #fff;
+            border-radius: 50%;
+        }
+        .mode-btn .mode-text {
+            font-weight: 600;
+            font-size: 15px;
+            color: var(--gray-800);
+        }
+        .mode-btn .mode-icon {
+            margin-left: auto;
+            font-size: 18px;
+        }
+
+        /* Dropdown */
+        .set-select {
+            margin-top: 10px;
+            margin-left: 32px;
+        }
+        .set-select select {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid var(--gray-200);
+            border-radius: 8px;
+            font-size: 14px;
+            font-family: inherit;
+            background: #fff;
+            color: var(--gray-700);
+            cursor: pointer;
+        }
+        .set-select select:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+        .set-select.hidden { display: none; }
+
+        /* Start Button */
+        .start-btn {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: #fff;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+        }
+        .start-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 16px rgba(79, 70, 229, 0.35);
+        }
+
+        /* History Icon Button */
+        .logo {
+            position: relative;
+        }
+        .history-icon-btn {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 8px;
+            background: var(--gray-100);
+            font-size: 13px;
+            font-family: inherit;
+            font-weight: 500;
+            color: var(--gray-600);
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .history-icon-btn:hover {
+            background: var(--gray-200);
+            color: var(--gray-800);
+        }
+
+        /* Settings */
+        .settings {
+            margin-top: 24px;
+            padding-top: 20px;
+            border-top: 1px solid var(--gray-100);
+        }
+        .setting-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 14px;
+        }
+        .setting-item:last-child { margin-bottom: 0; }
+        .setting-item label {
+            font-size: 13px;
+            color: var(--gray-500);
+            min-width: 60px;
+        }
+        .setting-item select {
+            flex: 1;
+            padding: 8px 10px;
+            border: 1px solid var(--gray-200);
+            border-radius: 8px;
+            font-size: 13px;
+            font-family: inherit;
+            background: #fff;
+        }
+        .setting-item input[type="range"] {
+            flex: 1;
+            height: 4px;
+            -webkit-appearance: none;
+            background: var(--gray-200);
+            border-radius: 2px;
+        }
+        .setting-item input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 16px;
+            height: 16px;
+            background: var(--primary);
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .test-btn {
+            padding: 8px 12px;
+            background: var(--gray-100);
+            border: none;
+            border-radius: 6px;
+            font-size: 12px;
+            font-family: inherit;
+            cursor: pointer;
+            color: var(--gray-600);
+        }
+        .test-btn:hover { background: var(--gray-200); }
+        .volume-val {
+            font-size: 12px;
+            color: var(--gray-500);
+            min-width: 36px;
+            text-align: right;
+        }
+
+        /* Browser notice */
+        .browser-notice {
+            text-align: center;
+            padding: 10px;
+            font-size: 12px;
+            color: var(--gray-400);
+            margin-top: 16px;
+        }
+
+        /* ==================== INTERVIEW SCREEN ==================== */
+        #interviewScreen {
+            justify-content: flex-start;
+            padding-top: 40px;
+        }
+
+        .interview-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 32px;
+        }
+        .topic-label {
+            font-size: 14px;
+            color: var(--gray-500);
+        }
+        .q-badge {
+            background: var(--primary);
+            color: #fff;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .interview-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Avatar */
+        .avatar-wrap {
+            position: relative;
+            margin-bottom: 24px;
+        }
+        .avatar {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            overflow: hidden;
+            background: var(--gray-200);
+            border: 4px solid #fff;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .avatar.speaking {
+            border-color: var(--primary);
+            animation: avatarPulse 1.5s ease-in-out infinite;
+        }
+        .avatar.nodding {
+            animation: nod 1.2s ease-in-out infinite;
+        }
+        @keyframes avatarPulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(79, 70, 229, 0.4); }
+            50% { box-shadow: 0 0 0 12px rgba(79, 70, 229, 0); }
+        }
+        @keyframes nod {
+            0%, 100% { transform: rotate(0deg); }
+            30% { transform: rotate(2deg); }
+            70% { transform: rotate(-2deg); }
+        }
+        .avatar-status {
+            text-align: center;
+            font-size: 14px;
+            color: var(--gray-500);
+            margin-bottom: 32px;
+        }
+
+        /* Timer */
+        .timer-section {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .timer {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--gray-800);
+            color: #fff;
+            padding: 10px 24px;
+            border-radius: 12px;
+            min-width: 100px;
+        }
+        .timer.recording {
+            background: var(--danger);
+        }
+        .timer-time {
+            font-size: 24px;
+            font-weight: 600;
+            font-variant-numeric: tabular-nums;
+        }
+
+        /* Recording indicator */
+        .rec-indicator {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--danger);
+        }
+        .rec-indicator.active { display: flex; }
+        .rec-dot {
+            width: 10px;
+            height: 10px;
+            background: var(--danger);
+            border-radius: 50%;
+            animation: blink 1s infinite;
+        }
+        @keyframes blink { 50% { opacity: 0.3; } }
+
+        .status-text {
+            font-size: 14px;
+            color: var(--gray-500);
+            margin-bottom: 32px;
+            min-height: 21px;
+        }
+
+        /* Progress */
+        .progress-section {
+            width: 100%;
+            max-width: 300px;
+            margin-bottom: 32px;
+        }
+        .progress-bar {
+            height: 4px;
+            background: var(--gray-200);
+            border-radius: 2px;
+            overflow: hidden;
+            margin-bottom: 12px;
+        }
+        .progress-fill {
+            height: 100%;
+            background: var(--primary);
+            transition: width 0.4s ease;
+        }
+        .progress-steps {
+            display: flex;
+            justify-content: space-between;
+        }
+        .progress-steps span {
+            font-size: 12px;
+            color: var(--gray-400);
+            font-weight: 500;
+        }
+        .progress-steps span.active {
+            color: var(--primary);
+            font-weight: 600;
+        }
+        .progress-steps span.done {
+            color: var(--success);
+        }
+
+        /* Exit button */
+        .exit-btn {
+            padding: 12px 24px;
+            background: transparent;
+            border: 1px solid var(--gray-300);
+            border-radius: 10px;
+            font-size: 14px;
+            font-family: inherit;
+            color: var(--gray-600);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .exit-btn:hover {
+            background: var(--gray-50);
+            border-color: var(--gray-400);
+        }
+
+        /* ==================== RESULT SCREEN ==================== */
+        #resultScreen {
+            padding-bottom: 40px;
+        }
+
+        .result-header {
+            text-align: center;
+            padding: 32px 20px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            border-radius: 20px;
+            color: #fff;
+            margin-bottom: 24px;
+        }
+        .result-header h2 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+        .result-header p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* Action buttons */
+        .action-row {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+        .action-btn {
+            flex: 1;
+            padding: 12px 16px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+        .action-btn.primary {
+            background: var(--primary);
+            color: #fff;
+            border: none;
+        }
+        .action-btn.primary:hover { background: var(--primary-dark); }
+        .action-btn.outline {
+            background: #fff;
+            color: var(--gray-700);
+            border: 1px solid var(--gray-200);
+        }
+        .action-btn.outline:hover { background: var(--gray-50); }
+
+        .toggle-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 12px;
+            background: var(--gray-50);
+            border: none;
+            border-radius: 8px;
+            font-size: 13px;
+            font-family: inherit;
+            color: var(--gray-600);
+            cursor: pointer;
+            margin-bottom: 16px;
+        }
+        .toggle-btn:hover { background: var(--gray-100); }
+
+        /* Accordion */
+        .accordion {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .accordion-item {
+            background: #fff;
+            border: 1px solid var(--gray-200);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .accordion-head {
+            padding: 14px 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: background 0.15s;
+        }
+        .accordion-head:hover { background: var(--gray-50); }
+        .accordion-head .q-title {
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--gray-800);
+        }
+        .accordion-head .q-type {
+            font-weight: 400;
+            font-size: 12px;
+            color: var(--gray-500);
+            margin-left: 8px;
+        }
+        .accordion-head .arrow {
+            color: var(--gray-400);
+            transition: transform 0.2s;
+            font-size: 12px;
+        }
+        .accordion-item.open .arrow { transform: rotate(180deg); }
+        .accordion-body {
+            display: none;
+            padding: 0 16px 16px;
+        }
+        .accordion-item.open .accordion-body { display: block; }
+
+        .resp-block {
+            margin-bottom: 14px;
+        }
+        .resp-block:last-child { margin-bottom: 0; }
+        .resp-label {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--gray-400);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+        .resp-content {
+            background: var(--gray-50);
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 13px;
+            line-height: 1.6;
+            color: var(--gray-700);
+        }
+        .resp-content.question {
+            background: #eef2ff;
+            color: var(--gray-800);
+        }
+        .word-count {
+            font-size: 11px;
+            color: var(--gray-400);
+            margin-top: 4px;
+        }
+
+        /* Audio player */
+        .audio-player {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--gray-50);
+            padding: 10px 12px;
+            border-radius: 8px;
+        }
+        .audio-player .play-btn {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: none;
+            background: var(--primary);
+            color: #fff;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            flex-shrink: 0;
+        }
+        .audio-player .bar {
+            flex: 1;
+            height: 4px;
+            background: var(--gray-200);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+        .audio-player .bar-fill {
+            height: 100%;
+            background: var(--primary);
+            width: 0;
+        }
+        .audio-player .time {
+            font-size: 12px;
+            color: var(--gray-500);
+            min-width: 32px;
+            text-align: right;
+        }
+
+        /* AI Feedback */
+        .ai-feedback {
+            background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+            border-radius: 8px;
+            padding: 12px;
+        }
+        .ai-feedback-label {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--success);
+            margin-bottom: 6px;
+        }
+        .ai-feedback-content {
+            font-size: 13px;
+            line-height: 1.6;
+            color: var(--gray-700);
+        }
+        .ai-feedback-placeholder {
+            color: var(--gray-400);
+            font-style: italic;
+        }
+
+        /* Overall */
+        .overall-box {
+            background: linear-gradient(135deg, #fef9c3 0%, #fef08a 100%);
+            border-radius: 12px;
+            padding: 16px;
+            margin-top: 16px;
+            display: none;
+        }
+        .overall-box.show { display: block; }
+        .overall-box h4 {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--gray-800);
+            margin-bottom: 8px;
+        }
+        .overall-content {
+            font-size: 13px;
+            line-height: 1.6;
+            color: var(--gray-700);
+        }
+
+        /* Sample answers */
+        .sample-section {
+            margin-top: 20px;
+            padding-top: 16px;
+            border-top: 1px solid var(--gray-200);
+            display: none;
+        }
+        .sample-section.show { display: block; }
+        .sample-section h4 {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--gray-700);
+            margin-bottom: 12px;
+        }
+        .sample-item {
+            background: #fffbeb;
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 10px;
+        }
+        .sample-item:last-child { margin-bottom: 0; }
+        .sample-q {
+            font-size: 11px;
+            font-weight: 600;
+            color: #b45309;
+            margin-bottom: 4px;
+        }
+        .sample-text {
+            font-size: 13px;
+            line-height: 1.6;
+            color: var(--gray-700);
+        }
+
+        /* Bottom actions */
+        .bottom-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .bottom-actions .action-btn {
+            flex: 1;
+        }
+
+        /* ==================== MODALS ==================== */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 100;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .modal-overlay.active { display: flex; }
+        .modal {
+            background: #fff;
+            border-radius: 16px;
+            width: 100%;
+            max-width: 400px;
+            max-height: 85vh;
+            overflow-y: auto;
+        }
+        .modal-header {
+            padding: 20px;
+            border-bottom: 1px solid var(--gray-100);
+            font-weight: 700;
+            font-size: 16px;
+        }
+        .modal-body {
+            padding: 20px;
+        }
+        .modal-body p {
+            font-size: 14px;
+            color: var(--gray-600);
+            margin-bottom: 16px;
+        }
+        .modal-body textarea {
+            width: 100%;
+            min-height: 180px;
+            border: 1px solid var(--gray-200);
+            border-radius: 8px;
+            padding: 12px;
+            font-family: inherit;
+            font-size: 13px;
+            resize: vertical;
+        }
+        .modal-body textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+        .modal-footer {
+            padding: 16px 20px;
+            border-top: 1px solid var(--gray-100);
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+        .modal-btn {
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: inherit;
+            cursor: pointer;
+        }
+        .modal-btn.cancel {
+            background: var(--gray-100);
+            border: none;
+            color: var(--gray-600);
+        }
+        .modal-btn.confirm {
+            background: var(--primary);
+            border: none;
+            color: #fff;
+        }
+        .modal-btn.danger {
+            background: var(--danger);
+            border: none;
+            color: #fff;
+        }
+
+        /* History Modal */
+        .history-modal {
+            max-width: 480px;
+        }
+        .history-modal .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .history-modal .close-btn {
+            background: none;
+            border: none;
+            font-size: 18px;
+            color: var(--gray-400);
+            cursor: pointer;
+        }
+        .history-tabs {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+        .tab-btn {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            background: var(--gray-100);
+            font-size: 13px;
+            font-weight: 600;
+            font-family: inherit;
+            cursor: pointer;
+            color: var(--gray-600);
+            transition: all 0.2s;
+        }
+        .tab-btn.active {
+            background: var(--primary);
+            color: #fff;
+        }
+        .history-content {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        .history-item {
+            background: var(--gray-50);
+            border-radius: 10px;
+            margin-bottom: 8px;
+            overflow: hidden;
+        }
+        .history-item:last-child { margin-bottom: 0; }
+        .history-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 14px;
+            cursor: pointer;
+            list-style: none;
+        }
+        .history-item-header::-webkit-details-marker { display: none; }
+        .history-item[open] {
+            background: var(--gray-100);
+        }
+        .history-date {
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--gray-600);
+        }
+        .history-score {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        .history-detail {
+            padding: 0 14px 14px;
+            border-top: 1px solid var(--gray-200);
+            margin-top: 4px;
+            padding-top: 12px;
+        }
+        .history-topic {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--gray-800);
+            margin-bottom: 4px;
+        }
+        .history-category {
+            font-size: 11px;
+            color: var(--gray-500);
+            margin-bottom: 10px;
+        }
+        .history-improvements-list {
+            font-size: 12px;
+            color: var(--gray-600);
+            line-height: 1.6;
+        }
+        .history-improvements-list ul {
+            margin: 0 0 0 16px;
+            padding: 0;
+        }
+        .history-improvements-list li {
+            margin-bottom: 4px;
+        }
+        .history-no-imp {
+            font-size: 12px;
+            color: var(--gray-400);
+            font-style: italic;
+        }
+        .history-empty {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--gray-400);
+        }
+        .analysis-section {
+            margin-bottom: 20px;
+        }
+        .analysis-section:last-child { margin-bottom: 0; }
+        .analysis-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--gray-800);
+            margin-bottom: 12px;
+        }
+        .analysis-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 12px;
+            background: var(--gray-50);
+            border-radius: 8px;
+            margin-bottom: 8px;
+            gap: 10px;
+        }
+        .analysis-label {
+            font-size: 12px;
+            color: var(--gray-700);
+            flex-shrink: 0;
+            min-width: 100px;
+        }
+        .analysis-bar {
+            flex: 1;
+            height: 8px;
+            background: var(--gray-200);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .analysis-bar-fill {
+            height: 100%;
+            border-radius: 4px;
+        }
+        .analysis-bar-fill.weak { background: var(--danger); }
+        .analysis-bar-fill.medium { background: var(--warning); }
+        .analysis-bar-fill.strong { background: var(--success); }
+        .analysis-score {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--gray-500);
+            flex-shrink: 0;
+            min-width: 55px;
+            text-align: right;
+        }
+        .trend-box {
+            padding: 12px;
+            background: var(--gray-50);
+            border-radius: 8px;
+            font-size: 13px;
+            color: var(--gray-700);
+            line-height: 1.5;
+        }
+
+        /* Toast */
+        .toast {
+            position: fixed;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%) translateY(80px);
+            background: var(--gray-800);
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 500;
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: 200;
+        }
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+        .toast.success { background: var(--success); }
+        .toast.error { background: var(--danger); }
+
+        /* Incompatible */
+        .incompatible {
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .incompatible .icon { font-size: 56px; margin-bottom: 16px; }
+        .incompatible h2 { 
+            color: var(--danger); 
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+        .incompatible p {
+            color: var(--gray-500);
+            font-size: 14px;
+            line-height: 1.6;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        /* Responsive */
+        @media (max-width: 400px) {
+            .timer-time { font-size: 32px; }
+            .timer { padding: 14px 28px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Incompatible Browser -->
+        <div id="incompatibleScreen" class="screen">
+            <div class="incompatible">
+                <div class="icon">⚠️</div>
+                <h2>Browser Not Supported</h2>
+                <p>Please use Chrome or Edge for speech recognition and recording features.</p>
+            </div>
+        </div>
+
+        <!-- Start Screen -->
+        <div id="startScreen" class="screen">
+            <div class="logo">
+                <button class="history-icon-btn" onclick="openHistoryModal()" title="Practice History">📊 History</button>
+                <div class="logo-icon">🎤</div>
+                <h1>Speaking Task 2: Take an Interview</h1>
+                <p>TOEFL iBT 2026 Revised Format</p>
+            </div>
+
+            <div class="main-card">
+                <div class="mode-group">
+                    <label class="mode-btn selected" onclick="selectMode('random')">
+                        <input type="radio" name="mode" value="random" checked>
+                        <span class="check"></span>
+                        <span class="mode-text">Random Mode</span>
+                        <span class="mode-icon">🎲</span>
+                    </label>
+
+                    <label class="mode-btn" onclick="selectMode('select')">
+                        <input type="radio" name="mode" value="select">
+                        <span class="check"></span>
+                        <span class="mode-text">Select Set</span>
+                        <span class="mode-icon">📋</span>
+                    </label>
+                    <div class="set-select hidden" id="setDropdown">
+                        <select id="setSelect" onclick="event.stopPropagation()"></select>
+                    </div>
+                </div>
+
+                <button class="start-btn" onclick="startInterview()">
+                    Start Interview
+                </button>
+
+                <div class="settings">
+                    <div class="setting-item">
+                        <label>Voice</label>
+                        <select id="voiceSelect"></select>
+                        <button class="test-btn" onclick="testVoice()">Test</button>
+                    </div>
+                    <div class="setting-item">
+                        <label>Volume</label>
+                        <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="1">
+                        <span class="volume-val" id="volumeVal">100%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="browser-notice">
+                Best experience on Chrome or Edge
+            </div>
+        </div>
+
+        <!-- Interview Screen -->
+        <div id="interviewScreen" class="screen">
+            <div class="interview-header">
+                <span class="topic-label" id="topicLabel">Set 1: Urban Life</span>
+                <span class="q-badge" id="qBadge">Intro</span>
+            </div>
+
+            <div class="interview-content">
+                <div class="avatar-wrap">
+                    <div class="avatar" id="avatar">
+                        <img id="avatarImg" src="" alt="Interviewer">
+                    </div>
+                </div>
+                <div class="avatar-status" id="avatarStatus">Preparing...</div>
+
+                <div class="timer-section">
+                    <div class="timer" id="timer">
+                        <span class="timer-time" id="timerTime">--:--</span>
+                    </div>
+                </div>
+
+                <div class="rec-indicator" id="recInd">
+                    <span class="rec-dot"></span>
+                    <span>Recording</span>
+                </div>
+
+                <div class="status-text" id="status"></div>
+
+                <div class="progress-section">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progBar" style="width:0%"></div>
+                    </div>
+                    <div class="progress-steps">
+                        <span id="s1">Q1</span>
+                        <span id="s2">Q2</span>
+                        <span id="s3">Q3</span>
+                        <span id="s4">Q4</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Result Screen -->
+        <div id="resultScreen" class="screen">
+            <div class="result-header">
+                <h2>✓ Interview Complete</h2>
+                <p id="resultTopic">Set 1: Urban Life</p>
+            </div>
+
+            <div class="action-row">
+                <button class="action-btn primary" onclick="copyPrompt()">📋 AI Scoring</button>
+                <button class="action-btn outline" onclick="openFeedbackModal()">📥 Feedback</button>
+            </div>
+
+            <button class="toggle-btn" onclick="toggleAll()">
+                <span id="toggleIcon">▼</span>
+                <span id="toggleText">Expand All</span>
+            </button>
+
+            <div class="accordion" id="accordion"></div>
+
+            <div class="overall-box" id="overallFeedback">
+                <h4>📊 Overall Assessment</h4>
+                <div class="overall-content" id="overallContent"></div>
+            </div>
+
+            <div class="bottom-actions">
+                <button class="action-btn outline" onclick="retry()">Retry</button>
+                <button class="action-btn outline" onclick="goHome()">New Set</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Feedback Modal -->
+    <div class="modal-overlay" id="feedbackModal">
+        <div class="modal">
+            <div class="modal-header">Feedback</div>
+            <div class="modal-body">
+                <textarea id="feedbackInput" placeholder=""></textarea>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn cancel" onclick="closeModal('feedbackModal')">Cancel</button>
+                <button class="modal-btn confirm" onclick="parseFeedback()">Apply</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- History Modal -->
+    <div class="modal-overlay" id="historyModal">
+        <div class="modal history-modal">
+            <div class="modal-header">
+                <span>📊 Practice History</span>
+                <button class="close-btn" onclick="closeModal('historyModal')">✕</button>
+            </div>
+            <div class="modal-body">
+                <div class="history-tabs">
+                    <button class="tab-btn active" onclick="showHistoryTab('records')">Records</button>
+                    <button class="tab-btn" onclick="showHistoryTab('analysis')">Weakness Analysis</button>
+                </div>
+                <div id="historyRecords" class="history-content"></div>
+                <div id="historyAnalysis" class="history-content" style="display:none;"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn cancel" onclick="clearHistory()">Clear All</button>
+                <button class="modal-btn confirm" onclick="closeModal('historyModal')">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+    <script>
+        // ============================================
+        // DATA
+        // ============================================
+        const sets = [
+            {
+                id: 1,
+                category: "Urban Life & Housing",
+                topic: "City vs Rural Life",
+                intro: "You have agreed to take part in a research study about urban life. You will have a short online interview with a researcher. Thank you for participating.",
+                questions: [
+                    { type: "Personal Recall", text: "Now, do you currently live in a big city, a small town, or a village?", transition: "Great." },
+                    { type: "Preference/Reaction", text: "Cities affect people in different ways. Some people find cities dynamic and exciting. Others find that cities are overwhelming and drain them of energy. What kind of reaction do you have to cities? Why do you think you react in this way?", transition: "I see." },
+                    { type: "Opinion with Support", text: "Some people believe that those who live in cities lead more interesting lives. They would argue, for example, that people who live in cities have more access to professional opportunities and interesting leisure activities. Do you agree that people who live in cities lead more interesting lives? Why or why not?", transition: "Good points. Let me ask you one final question." },
+                    { type: "Policy/Prediction", text: "For some time now, researchers have been interested in whether green spaces, such as parks, make people who live in cities happier. Do you think that city governments should create more parks in urban areas to promote a general sense of happiness and life satisfaction? Why or why not?", transition: null }
+                ]
+            },
+            {
+                id: 2,
+                category: "Technology & Digital Life",
+                topic: "Smartphone Usage",
+                intro: "You have agreed to take part in a research study about smartphone usage and its impact on daily life. You will have a short online interview with a researcher. Thank you for participating.",
+                questions: [
+                    { type: "Personal Recall", text: "Think back to the last time you used your phone for something important. What did you use it for, and why was it important?", transition: "Great." },
+                    { type: "Preference/Reaction", text: "Everyone feels differently about phones. Some people feel that phones are essential tools that make life easier. Others feel that phones are a constant distraction. How do you feel about your relationship with your phone?", transition: "Interesting." },
+                    { type: "Opinion with Support", text: "Some people believe smartphones clearly make life better by providing instant access to information and communication. Do you agree that smartphones have improved the quality of life? Why or why not?", transition: "Good points. Let me ask you one final question." },
+                    { type: "Policy/Prediction", text: "Do you think schools and workplaces should encourage healthier phone habits, such as limiting screen time or creating phone-free zones? What might be the advantages and disadvantages of such policies?", transition: null }
+                ]
+            },
+            {
+                id: 3,
+                category: "Work & Career",
+                topic: "Remote Work",
+                intro: "You have agreed to take part in a research study about remote work and its effects on professional life. You will have a short online interview with a researcher. Thank you for participating.",
+                questions: [
+                    { type: "Personal Recall", text: "Think back to the last time you worked from a location other than your regular workplace or school. Where were you, and how did you feel about the experience?", transition: "Great." },
+                    { type: "Preference/Reaction", text: "Working remotely affects people in different ways. Some people feel more productive and focused at home. Others feel isolated and struggle to separate work from personal life. How does remote work affect you personally?", transition: "I see." },
+                    { type: "Opinion with Support", text: "Some people believe that those who work remotely have a better work-life balance because they save commuting time and have more flexibility. Do you agree that remote workers generally have a better work-life balance? Why or why not?", transition: "Good points. Let me ask you one final question." },
+                    { type: "Policy/Prediction", text: "Do you think that companies should invest more in virtual social events and team-building activities to maintain company culture in remote settings? What might be the benefits and drawbacks of this approach?", transition: null }
+                ]
+            }
+        ];
+
+        // Interviewer images - professional looking adults
+        const avatarsFemale = [
+            'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&h=200&fit=crop&crop=face',
+            'https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=200&h=200&fit=crop&crop=face',
+            'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&h=200&fit=crop&crop=face'
+        ];
+        const avatarsMale = [
+            'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&h=200&fit=crop&crop=face',
+            'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face',
+            'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face'
+        ];
+
+        // ============================================
+        // STATE
+        // ============================================
+        let currentSet = 0, currentQ = 0, volume = 1, voice = null;
+        let inProgress = false, selectedMode = 'random';
+        let recorder = null, recognition = null, timerInt = null, timeLeft = 45;
+        let results = { recordings: [], transcripts: [] };
+        let allExpanded = false, feedbackData = {};
+        let currentTranscript = ''; // 현재 녹음 중인 transcript
+
+        // History
+        const HISTORY_KEY = 'toefl_practice_history';
+        const MAX_HISTORY = 20;
+
+        // ============================================
+        // INIT
+        // ============================================
+        document.addEventListener('DOMContentLoaded', () => {
+            if (!checkBrowser()) {
+                show('incompatibleScreen');
+                return;
+            }
+            renderSets();
+            loadVoices();
+            document.getElementById('volumeSlider').oninput = e => {
+                volume = parseFloat(e.target.value);
+                document.getElementById('volumeVal').textContent = Math.round(volume * 100) + '%';
+            };
+            show('startScreen');
+        });
+
+        function checkBrowser() {
+            return 'MediaRecorder' in window && 
+                   ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) &&
+                   'speechSynthesis' in window;
+        }
+
+        function renderSets() {
+            const sel = document.getElementById('setSelect');
+            
+            // 카테고리별로 그룹화
+            const categories = {};
+            sets.forEach((s, i) => {
+                if (!categories[s.category]) {
+                    categories[s.category] = [];
+                }
+                categories[s.category].push({ ...s, index: i });
+            });
+            
+            // optgroup으로 렌더링
+            let html = '';
+            Object.keys(categories).forEach(cat => {
+                html += `<optgroup label="${cat}">`;
+                categories[cat].forEach(s => {
+                    html += `<option value="${s.index}">Set ${s.id}: ${s.topic}</option>`;
+                });
+                html += '</optgroup>';
+            });
+            
+            sel.innerHTML = html;
+        }
+
+        async function loadVoices() {
+            let allVoices = speechSynthesis.getVoices();
+            if (!allVoices.length) {
+                await new Promise(r => { speechSynthesis.onvoiceschanged = r; setTimeout(r, 1500); });
+                allVoices = speechSynthesis.getVoices();
+            }
+
+            const keywords = [
+                { keyword: 'Google US English', label: 'US English (Google)' },
+                { keyword: 'Google UK English Female', label: 'UK English Female' },
+                { keyword: 'Google UK English Male', label: 'UK English Male' }
+            ];
+
+            const sel = document.getElementById('voiceSelect');
+            const found = [];
+
+            keywords.forEach(k => {
+                const v = allVoices.find(x => x.name.includes(k.keyword));
+                if (v) found.push({ voice: v, label: k.label });
+            });
+
+            if (found.length) {
+                sel.innerHTML = found.map((f, i) => `<option value="${i}">${f.label}</option>`).join('');
+                voice = found[0].voice;
+                sel.onchange = e => voice = found[parseInt(e.target.value)].voice;
+            } else {
+                const eng = allVoices.filter(v => v.lang.startsWith('en')).slice(0, 3);
+                if (eng.length) {
+                    sel.innerHTML = eng.map((v, i) => `<option value="${i}">${v.name}</option>`).join('');
+                    voice = eng[0];
+                    sel.onchange = e => voice = eng[parseInt(e.target.value)];
+                }
+            }
+        }
+
+        // ============================================
+        // MODE & NAV
+        // ============================================
+        function selectMode(mode) {
+            selectedMode = mode;
+            document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('selected'));
+            if (mode === 'random') {
+                document.querySelector('.mode-btn:first-child').classList.add('selected');
+                document.getElementById('setDropdown').classList.add('hidden');
+            } else {
+                document.querySelector('.mode-btn:nth-child(2)').classList.add('selected');
+                document.getElementById('setDropdown').classList.remove('hidden');
+            }
+        }
+
+        function show(id) {
+            document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        }
+
+        function goHome() { show('startScreen'); }
+        function closeModal(id) { document.getElementById(id).classList.remove('active'); }
+        function retry() { startSet(currentSet); }
+
+        // ============================================
+        // INTERVIEW
+        // ============================================
+        function startInterview() {
+            const i = selectedMode === 'random' ? Math.floor(Math.random() * sets.length) : parseInt(document.getElementById('setSelect').value);
+            startSet(i);
+        }
+
+        async function startSet(i) {
+            currentSet = i; currentQ = 0;
+            results = { recordings: [], transcripts: [] };
+            feedbackData = {};
+
+            try {
+                const s = await navigator.mediaDevices.getUserMedia({ audio: true });
+                s.getTracks().forEach(t => t.stop());
+            } catch { return toast('Microphone required', 'error'); }
+
+            const set = sets[i];
+            document.getElementById('topicLabel').textContent = `Set ${set.id}: ${set.topic}`;
+            
+            // 음성 성별에 따라 사진 선택
+            const isMale = voice?.name?.toLowerCase().includes('male') && !voice?.name?.toLowerCase().includes('female');
+            const avatarList = isMale ? avatarsMale : avatarsFemale;
+            document.getElementById('avatarImg').src = avatarList[Math.floor(Math.random() * avatarList.length)];
+            updateProgress();
+
+            inProgress = true;
+            show('interviewScreen');
+            await playIntro();
+        }
+
+        async function playIntro() {
+            setStatus('Interviewer is speaking...');
+            document.getElementById('qBadge').textContent = 'Intro';
+            document.getElementById('timerTime').textContent = '--:--';
+            
+            const av = document.getElementById('avatar');
+            av.classList.add('speaking');
+            av.classList.remove('nodding');
+            document.getElementById('avatarStatus').textContent = 'Speaking...';
+
+            await speak(sets[currentSet].intro);
+            av.classList.remove('speaking');
+            await delay(1000);
+            playQuestion(0);
+        }
+
+        async function playQuestion(q) {
+            currentQ = q;
+            const question = sets[currentSet].questions[q];
+            document.getElementById('qBadge').textContent = `Q${q + 1}/4`;
+            setStatus('Listen to the question...');
+            updateProgress();
+
+            const av = document.getElementById('avatar');
+            av.classList.add('speaking');
+            av.classList.remove('nodding');
+            document.getElementById('avatarStatus').textContent = 'Asking...';
+
+            await speak(question.text);
+            av.classList.remove('speaking');
+
+            setStatus('Get ready...');
+            await delay(1500);
+            await beep();
+            startRecording();
+        }
+
+        async function startRecording() {
+            setStatus('');
+            document.getElementById('recInd').classList.add('active');
+            document.getElementById('timer').classList.add('recording');
+
+            const av = document.getElementById('avatar');
+            av.classList.add('nodding');
+            document.getElementById('avatarStatus').textContent = 'Listening...';
+
+            currentTranscript = ''; // 초기화
+
+            const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+            recorder = new MediaRecorder(stream);
+            let chunks = [];
+            
+            recorder.ondataavailable = e => {
+                if (e.data.size > 0) chunks.push(e.data);
+            };
+
+            // Promise로 녹음 완료 처리
+            window.recordingPromise = new Promise(resolve => {
+                recorder.onstop = () => {
+                    const blob = new Blob(chunks, { type: 'audio/webm' });
+                    results.recordings.push(URL.createObjectURL(blob));
+                    stream.getTracks().forEach(t => t.stop());
+                    resolve();
+                };
+            });
+
+            const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+            recognition = new SR();
+            recognition.lang = 'en-US';
+            recognition.continuous = true;
+            recognition.interimResults = true;
+            recognition.onresult = e => {
+                currentTranscript = '';
+                for (let i = 0; i < e.results.length; i++) {
+                    currentTranscript += e.results[i][0].transcript + ' ';
+                }
+            };
+            recognition.onerror = () => {};
+
+            recorder.start();
+            recognition.start();
+
+            timeLeft = 45;
+            document.getElementById('timerTime').textContent = '0:45';
+            timerInt = setInterval(() => {
+                timeLeft--;
+                document.getElementById('timerTime').textContent = `0:${timeLeft.toString().padStart(2, '0')}`;
+                if (timeLeft <= 0) stopRecording();
+            }, 1000);
+        }
+
+        async function stopRecording() {
+            clearInterval(timerInt);
+            document.getElementById('recInd').classList.remove('active');
+            document.getElementById('timer').classList.remove('recording');
+            document.getElementById('avatar').classList.remove('nodding');
+
+            // 녹음 중지 및 완료 대기
+            if (recorder?.state !== 'inactive') {
+                recorder.stop();
+            }
+            recognition?.stop();
+            
+            // 녹음 파일 저장 완료까지 대기
+            if (window.recordingPromise) {
+                await window.recordingPromise;
+            }
+            
+            results.transcripts.push(currentTranscript.trim() || '(No speech detected)');
+
+            await beep();
+
+            if (currentQ < 3) {
+                const trans = sets[currentSet].questions[currentQ].transition;
+                if (trans) {
+                    await delay(800);
+                    document.getElementById('avatar').classList.add('speaking');
+                    document.getElementById('avatarStatus').textContent = 'Speaking...';
+                    await speak(trans);
+                    document.getElementById('avatar').classList.remove('speaking');
+                }
+                await delay(500);
+                playQuestion(currentQ + 1);
+            } else {
+                finishInterview();
+            }
+        }
+
+        async function finishInterview() {
+            inProgress = false;
+            
+            // 프로그레스 바 100% 채우기
+            document.getElementById('progBar').style.width = '100%';
+            for (let i = 1; i <= 4; i++) {
+                document.getElementById('s' + i).className = 'done';
+            }
+            
+            document.getElementById('avatar').classList.add('speaking');
+            document.getElementById('avatarStatus').textContent = 'Speaking...';
+            await speak("Thank you for your participation. This concludes our interview.");
+            document.getElementById('avatar').classList.remove('speaking');
+            await delay(800);
+            showResults();
+        }
+
+        // ============================================
+        // RESULTS
+        // ============================================
+        function showResults() {
+            const set = sets[currentSet];
+            document.getElementById('resultTopic').textContent = `Set ${set.id}: ${set.topic}`;
+
+            const acc = document.getElementById('accordion');
+            acc.innerHTML = '';
+
+            set.questions.forEach((q, i) => {
+                const txt = results.transcripts[i];
+                const wc = txt === '(No speech detected)' ? 0 : txt.split(/\s+/).filter(w => w).length;
+
+                acc.innerHTML += `
+                    <div class="accordion-item" id="acc${i}">
+                        <div class="accordion-head" onclick="toggleAcc(${i})">
+                            <span><span class="q-title">Q${i + 1}</span><span class="q-type">${q.type}</span></span>
+                            <span class="arrow">▼</span>
+                        </div>
+                        <div class="accordion-body">
+                            <div class="resp-block">
+                                <div class="resp-label">Question</div>
+                                <div class="resp-content question">${q.text}</div>
+                            </div>
+                            <div class="resp-block">
+                                <div class="resp-label">Recording</div>
+                                <div class="audio-player">
+                                    <button class="play-btn" onclick="playAudio(${i}, this)">▶</button>
+                                    <div class="bar"><div class="bar-fill" id="bar${i}"></div></div>
+                                    <span class="time" id="dur${i}">0:00</span>
+                                </div>
+                                <audio id="aud${i}" src="${results.recordings[i]}" ontimeupdate="updateBar(${i})" onloadedmetadata="updateDur(${i})" onended="resetBtn(${i})"></audio>
+                            </div>
+                            <div class="resp-block">
+                                <div class="resp-label">Transcript</div>
+                                <div class="resp-content">${txt}</div>
+                                <div class="word-count">${wc} words</div>
+                            </div>
+                            <div class="resp-block">
+                                <div class="ai-feedback">
+                                    <div class="ai-feedback-label">🤖 AI Feedback</div>
+                                    <div class="ai-feedback-content" id="fb${i}"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            allExpanded = false;
+            document.getElementById('toggleIcon').textContent = '▼';
+            document.getElementById('toggleText').textContent = 'Expand All';
+            document.getElementById('overallFeedback').classList.remove('show');
+            show('resultScreen');
+        }
+
+        function toggleAcc(i) { document.getElementById('acc' + i).classList.toggle('open'); }
+
+        function toggleAll() {
+            allExpanded = !allExpanded;
+            document.querySelectorAll('.accordion-item').forEach(item => {
+                item.classList.toggle('open', allExpanded);
+            });
+            document.getElementById('toggleIcon').textContent = allExpanded ? '▲' : '▼';
+            document.getElementById('toggleText').textContent = allExpanded ? 'Collapse All' : 'Expand All';
+        }
+
+        // Audio
+        function playAudio(i, btn) {
+            const a = document.getElementById('aud' + i);
+            document.querySelectorAll('audio').forEach(x => x !== a && x.pause());
+            document.querySelectorAll('.play-btn').forEach(b => b.textContent = '▶');
+            if (a.paused) { a.play(); btn.textContent = '⏸'; }
+            else { a.pause(); btn.textContent = '▶'; }
+        }
+        function updateBar(i) {
+            const a = document.getElementById('aud' + i);
+            document.getElementById('bar' + i).style.width = (a.currentTime / a.duration * 100) + '%';
+        }
+        function updateDur(i) {
+            const a = document.getElementById('aud' + i);
+            const m = Math.floor(a.duration / 60), s = Math.floor(a.duration % 60);
+            document.getElementById('dur' + i).textContent = `${m}:${s.toString().padStart(2, '0')}`;
+        }
+        function resetBtn(i) { document.querySelector(`#acc${i} .play-btn`).textContent = '▶'; }
+
+        // AI Prompt
+        function copyPrompt() {
+            const set = sets[currentSet];
+            let p = `[TOEFL 2026 Speaking Interview 채점 요청]\n\n세트: Set ${set.id} - ${set.topic}\n\n`;
+            set.questions.forEach((q, i) => {
+                const t = results.transcripts[i];
+                const wc = t === '(No speech detected)' ? 0 : t.split(/\s+/).filter(w => w).length;
+                p += `## Q${i + 1} (${q.type})\n질문: ${q.text}\n내 답변: ${t} (${wc} words)\n\n`;
+            });
+            p += `---\n위 4개 답변을 TOEFL Speaking 루브릭 기준으로 채점해주세요.\n\n중요: 피드백 작성 시 불필요한 빈 줄 없이 컴팩트하게 정리해주세요. 각 항목은 한 줄로 작성하고, 개선사항과 추천답안은 문장들을 자연스럽게 이어서 공백 없이 작성해주세요.\n\n응답 형식:\n\n[Q1 FEEDBACK]\n점수: X/5\nFluency: ...\nIntelligibility: ...\nLanguage Use: ...\nOrganization: ...\n개선사항: (한 문단으로 컴팩트하게 작성)\n추천답안: (내가 말한 문장들을 최대한 살리면서 개선사항을 반영. 문장들을 자연스럽게 연결하여 한 문단으로 작성)\n[/Q1 FEEDBACK]\n\n[Q2 FEEDBACK]\n...\n[/Q2 FEEDBACK]\n\n[Q3 FEEDBACK]\n...\n[/Q3 FEEDBACK]\n\n[Q4 FEEDBACK]\n...\n[/Q4 FEEDBACK]\n\n[OVERALL]\n전체 예상 밴드 점수: X.X / 6.0\n종합 피드백: ...\n[/OVERALL]`;
+            navigator.clipboard.writeText(p).then(() => toast('Copied!', 'success'));
+        }
+
+        function openFeedbackModal() {
+            document.getElementById('feedbackInput').value = '';
+            document.getElementById('feedbackModal').classList.add('active');
+        }
+
+        function parseFeedback() {
+            const input = document.getElementById('feedbackInput').value;
+            if (!input.trim()) return toast('Paste feedback first', 'error');
+
+            let found = 0;
+            const improvements = [];
+            
+            ['Q1', 'Q2', 'Q3', 'Q4'].forEach((q, i) => {
+                const m = input.match(new RegExp(`\\[${q} FEEDBACK\\]([\\s\\S]*?)\\[\\/${q} FEEDBACK\\]`, 'i'));
+                if (m) {
+                    feedbackData[q] = m[1].trim();
+                    document.getElementById('fb' + i).innerHTML = feedbackData[q].replace(/\n/g, '<br>');
+                    found++;
+                    
+                    // 개선사항 추출
+                    const impMatch = m[1].match(/개선사항[:\s]*([^\n]+)/i);
+                    if (impMatch) {
+                        improvements.push(`Q${i+1}: ${impMatch[1].trim()}`);
+                    }
+                }
+            });
+
+            let overallScore = '';
+            const om = input.match(/\[OVERALL\]([\s\S]*?)\[\/OVERALL\]/i);
+            if (om) {
+                feedbackData.overall = om[1].trim();
+                document.getElementById('overallContent').innerHTML = feedbackData.overall.replace(/\n/g, '<br>');
+                document.getElementById('overallFeedback').classList.add('show');
+                
+                // 점수 추출
+                const scoreMatch = om[1].match(/(\d+\.?\d*)\s*\/\s*6/i);
+                if (scoreMatch) {
+                    overallScore = scoreMatch[0];
+                }
+            }
+
+            closeModal('feedbackModal');
+            if (found) {
+                toast(`Applied to ${found} question(s)`, 'success');
+                allExpanded = true;
+                document.querySelectorAll('.accordion-item').forEach(item => item.classList.add('open'));
+                document.getElementById('toggleIcon').textContent = '▲';
+                document.getElementById('toggleText').textContent = 'Collapse All';
+                
+                // 히스토리에 저장
+                if (overallScore) {
+                    saveToHistory(improvements, overallScore);
+                }
+            } else {
+                toast('Could not parse feedback', 'error');
+            }
+        }
+
+        // ============================================
+        // HISTORY
+        // ============================================
+        function getHistory() {
+            try {
+                return JSON.parse(localStorage.getItem(HISTORY_KEY)) || [];
+            } catch {
+                return [];
+            }
+        }
+
+        function saveToHistory(improvements, overallScore) {
+            const set = sets[currentSet];
+            const record = {
+                date: new Date().toLocaleString('ko-KR', { 
+                    year: 'numeric', month: '2-digit', day: '2-digit',
+                    hour: '2-digit', minute: '2-digit'
+                }),
+                setId: set.id,
+                category: set.category,
+                topic: set.topic,
+                improvements: improvements,
+                overallScore: overallScore
+            };
+
+            let history = getHistory();
+            history.unshift(record);
+            
+            // 최대 20개 유지
+            if (history.length > MAX_HISTORY) {
+                history = history.slice(0, MAX_HISTORY);
+            }
+
+            localStorage.setItem(HISTORY_KEY, JSON.stringify(history));
+            toast('Saved to history', 'success');
+        }
+
+        function openHistoryModal() {
+            renderHistoryRecords();
+            renderHistoryAnalysis();
+            document.getElementById('historyModal').classList.add('active');
+        }
+
+        function showHistoryTab(tab) {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            document.getElementById('historyRecords').style.display = tab === 'records' ? 'block' : 'none';
+            document.getElementById('historyAnalysis').style.display = tab === 'analysis' ? 'block' : 'none';
+        }
+
+        function renderHistoryRecords() {
+            const history = getHistory();
+            const container = document.getElementById('historyRecords');
+            
+            if (history.length === 0) {
+                container.innerHTML = '<div class="history-empty">📝 No practice records yet.<br>Complete an interview and apply feedback to save your progress.</div>';
+                return;
+            }
+
+            container.innerHTML = history.map((h, i) => `
+                <details class="history-item">
+                    <summary class="history-item-header">
+                        <span class="history-date">${h.date}</span>
+                        <span class="history-score">${h.overallScore}</span>
+                    </summary>
+                    <div class="history-detail">
+                        <div class="history-topic">Set ${h.setId}: ${h.topic}</div>
+                        <div class="history-category">${h.category}</div>
+                        ${h.improvements.length > 0 ? `
+                            <div class="history-improvements-list">
+                                <ul>
+                                    ${h.improvements.map(imp => `<li>${imp}</li>`).join('')}
+                                </ul>
+                            </div>
+                        ` : '<div class="history-no-imp">No improvement notes</div>'}
+                    </div>
+                </details>
+            `).join('');
+        }
+
+        function renderHistoryAnalysis() {
+            const history = getHistory();
+            const container = document.getElementById('historyAnalysis');
+            
+            if (history.length < 3) {
+                container.innerHTML = '<div class="history-empty">📊 Need at least 3 practice sessions for analysis.<br>Keep practicing!</div>';
+                return;
+            }
+
+            // 카테고리별 평균 점수 분석
+            const categoryScores = {};
+            history.forEach(h => {
+                const score = parseFloat(h.overallScore);
+                if (!isNaN(score)) {
+                    if (!categoryScores[h.category]) {
+                        categoryScores[h.category] = { total: 0, count: 0 };
+                    }
+                    categoryScores[h.category].total += score;
+                    categoryScores[h.category].count++;
+                }
+            });
+
+            // 평균 계산 및 정렬 (낮은 점수순 = 약점)
+            const categoryAvgs = Object.entries(categoryScores)
+                .map(([cat, data]) => ({
+                    category: cat,
+                    avg: data.total / data.count,
+                    count: data.count
+                }))
+                .sort((a, b) => a.avg - b.avg);
+
+            // Q1~Q4별 개선사항 빈도 분석
+            const qIssues = { Q1: 0, Q2: 0, Q3: 0, Q4: 0 };
+            history.forEach(h => {
+                h.improvements.forEach(imp => {
+                    const qMatch = imp.match(/^Q(\d)/);
+                    if (qMatch) qIssues['Q' + qMatch[1]]++;
+                });
+            });
+
+            const maxIssues = Math.max(...Object.values(qIssues), 1);
+
+            container.innerHTML = `
+                <div class="analysis-section">
+                    <div class="analysis-title">📉 Category Performance (Weakest First)</div>
+                    ${categoryAvgs.map(c => {
+                        const pct = (c.avg / 6) * 100;
+                        const cls = pct < 50 ? 'weak' : pct < 70 ? 'medium' : 'strong';
+                        return `
+                            <div class="analysis-item">
+                                <span class="analysis-label">${c.category.split(' & ')[0]} (${c.count})</span>
+                                <div class="analysis-bar">
+                                    <div class="analysis-bar-fill ${cls}" style="width: ${pct}%"></div>
+                                </div>
+                                <span class="analysis-score">${c.avg.toFixed(1)}/6</span>
+                            </div>
+                        `;
+                    }).join('')}
+                </div>
+                
+                <div class="analysis-section">
+                    <div class="analysis-title">🎯 Question Type Issues (Most Frequent)</div>
+                    ${Object.entries(qIssues).sort((a, b) => b[1] - a[1]).map(([q, count]) => {
+                        const pct = (count / maxIssues) * 100;
+                        const types = { Q1: 'Personal Recall', Q2: 'Preference', Q3: 'Opinion', Q4: 'Policy' };
+                        return `
+                            <div class="analysis-item">
+                                <span class="analysis-label">${q}: ${types[q]}</span>
+                                <div class="analysis-bar">
+                                    <div class="analysis-bar-fill ${count === maxIssues ? 'weak' : 'medium'}" style="width: ${pct}%"></div>
+                                </div>
+                                <span class="analysis-score">${count} issues</span>
+                            </div>
+                        `;
+                    }).join('')}
+                </div>
+                
+                <div class="analysis-section">
+                    <div class="analysis-title">📈 Recent Trend</div>
+                    <div class="trend-box">
+                        ${getScoreTrend(history)}
+                    </div>
+                </div>
+            `;
+        }
+
+        function getScoreTrend(history) {
+            if (history.length < 2) return 'Not enough data for trend analysis.';
+            
+            const recent5 = history.slice(0, Math.min(5, history.length));
+            const scores = recent5.map(h => parseFloat(h.overallScore)).filter(s => !isNaN(s));
+            
+            if (scores.length < 2) return 'Not enough score data.';
+            
+            const avg = scores.reduce((a, b) => a + b, 0) / scores.length;
+            const firstHalf = scores.slice(Math.floor(scores.length / 2));
+            const secondHalf = scores.slice(0, Math.floor(scores.length / 2));
+            
+            const firstAvg = firstHalf.reduce((a, b) => a + b, 0) / firstHalf.length;
+            const secondAvg = secondHalf.reduce((a, b) => a + b, 0) / secondHalf.length;
+            
+            const diff = secondAvg - firstAvg;
+            
+            if (diff > 0.3) return `📈 Great progress! Recent average: ${avg.toFixed(1)}/6 (↑${diff.toFixed(1)})`;
+            if (diff < -0.3) return `📉 Scores declining. Recent average: ${avg.toFixed(1)}/6 (↓${Math.abs(diff).toFixed(1)})`;
+            return `➡️ Stable performance. Recent average: ${avg.toFixed(1)}/6`;
+        }
+
+        function clearHistory() {
+            if (confirm('Clear all practice history? This cannot be undone.')) {
+                localStorage.removeItem(HISTORY_KEY);
+                renderHistoryRecords();
+                renderHistoryAnalysis();
+                toast('History cleared', 'success');
+            }
+        }
+
+        // ============================================
+        // UTILS
+        // ============================================
+        function speak(text) {
+            return new Promise(async resolve => {
+                speechSynthesis.cancel();
+                const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];
+                for (const s of sentences) {
+                    await new Promise(r => {
+                        const u = new SpeechSynthesisUtterance(s.trim());
+                        if (voice) { u.voice = voice; u.lang = voice.lang; }
+                        u.volume = volume;
+                        u.rate = 0.95;
+                        u.onend = r;
+                        u.onerror = r;
+                        speechSynthesis.speak(u);
+                    });
+                    await delay(100);
+                }
+                resolve();
+            });
+        }
+
+        function beep() {
+            return new Promise(r => {
+                const ctx = new (window.AudioContext || window.webkitAudioContext)();
+                const osc = ctx.createOscillator();
+                const gain = ctx.createGain();
+                osc.connect(gain);
+                gain.connect(ctx.destination);
+                osc.frequency.value = 880;
+                gain.gain.value = volume * 0.3;
+                osc.start();
+                setTimeout(() => { osc.stop(); ctx.close(); r(); }, 250);
+            });
+        }
+
+        function delay(ms) { return new Promise(r => setTimeout(r, ms)); }
+        function setStatus(t) { document.getElementById('status').textContent = t; }
+        function updateProgress() {
+            document.getElementById('progBar').style.width = (currentQ / 4 * 100) + '%';
+            for (let i = 1; i <= 4; i++) {
+                const el = document.getElementById('s' + i);
+                el.className = i < currentQ + 1 ? 'done' : i === currentQ + 1 ? 'active' : '';
+            }
+        }
+        function stopAll() {
+            clearInterval(timerInt);
+            if (recorder?.state !== 'inactive') recorder?.stop();
+            recognition?.stop();
+            speechSynthesis.cancel();
+        }
+        function testVoice() {
+            speechSynthesis.cancel();
+            const u = new SpeechSynthesisUtterance("Hello, I'll be your interviewer today.");
+            if (voice) { u.voice = voice; u.lang = voice.lang; }
+            u.volume = volume;
+            u.rate = 0.95;
+            speechSynthesis.speak(u);
+        }
+        function toast(msg, type = '') {
+            const t = document.getElementById('toast');
+            t.textContent = msg;
+            t.className = 'toast ' + type + ' show';
+            setTimeout(() => t.classList.remove('show'), 2500);
+        }
+    </script>
+</body>
+</html>
