@@ -1047,7 +1047,7 @@
         <!-- Start Screen -->
         <div id="startScreen" class="screen">
             <div class="logo">
-                <button class="history-icon-btn" onclick="openHistoryModal()" title="Practice History">📊 History</button>
+                <button class="history-icon-btn" onclick="openHistoryModal()" title="My Progress">📊 My Progress</button>
                 <div class="logo-icon">🎤</div>
                 <h1>Speaking Task 2: Take an Interview</h1>
                 <p>TOEFL iBT 2026 Revised Format</p>
@@ -1846,6 +1846,19 @@
             }
             renderSets();
             loadVoices();
+            
+            // 페이지 이탈/탭 전환 시 음성 중단
+            document.addEventListener('visibilitychange', () => {
+                if (document.hidden) {
+                    speechSynthesis.cancel();
+                    if (recorder?.state === 'recording') recorder.stop();
+                    if (recognition) recognition.stop();
+                }
+            });
+            window.addEventListener('beforeunload', () => {
+                speechSynthesis.cancel();
+                stopAll();
+            });
             document.getElementById('volumeSlider').oninput = e => {
                 volume = parseFloat(e.target.value);
                 document.getElementById('volumeVal').textContent = Math.round(volume * 100) + '%';
